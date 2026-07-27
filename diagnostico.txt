@@ -1,0 +1,15 @@
+Diagnostico de conectividade - boletos---mercadinho
+Timestamp: 2026-07-27 18:02:39 UTC
+
+Etapa 1: Verificacao de arquivo
+Arquivo 'boletos mo1.xls' encontrado no repositorio (via ls -la).
+Tipo de arquivo detectado (comando 'file'): CDFV2 Microsoft Excel (formato .xls binario antigo)
+
+Etapa 2: Leitura do arquivo
+openpyxl nao suporta o formato .xls binario antigo (apenas .xlsx), portanto foi usada a biblioteca xlrd.
+Biblioteca usada: xlrd
+Aba(s) encontrada(s): Report
+Numero de linhas: 1096
+Numero de colunas: 25
+
+Resultado: Diagnostico concluido com sucesso, sem erros.
