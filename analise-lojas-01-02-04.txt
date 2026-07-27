@@ -1,0 +1,39 @@
+Análise de boletos - lojas 01, 02 e 04 - 2026-07-27
+
+Resumo da execução automatizada:
+
+Loja 01 (boletos mo1.xls / boletos mo1.xlsx)
+- 1085 lançamentos (linhas 10-1094 da aba Report)
+- 53 classificações únicas de CC Contra Partida
+- Total geral: R$ 1.787.718,92 (Mercadorias P/Revenda: R$ 1.181.737,98)
+- Abas geradas: Mercadorias Revenda (810 linhas), Resumo Diário,
+  Resumo Mensal, Resumo Classificação, Resumo Grupos
+- recalc.py: 8536 fórmulas, 0 erros
+- Reconciliação: TOTAL GERAL = Resumo Classificação = Resumo Mensal =
+  Resumo Diário (bate em todas as abas, mês a mês); linha "n/d / a
+  revisar" zerada em todos os meses.
+
+Loja 02 (boletos mo2.xls -> convertido para boletos mo2.xlsx)
+- 595 lançamentos (linhas 10-604)
+- 36 classificações únicas
+- Total geral: R$ 513.885,02 (Mercadorias P/Revenda: R$ 394.206,74)
+- recalc.py: 6199 fórmulas, 0 erros
+- Reconciliação OK em todas as abas.
+
+Loja 04 (boletos mo4.xls -> convertido para boletos mo4.xlsx)
+- 786 lançamentos (linhas 10-795)
+- 40 classificações únicas
+- Total geral: R$ 745.058,39 (Mercadorias P/Revenda: R$ 527.007,07)
+- recalc.py: 7010 fórmulas, 0 erros
+- Reconciliação OK em todas as abas.
+
+Conversão .xls -> .xlsx: LibreOffice (soffice --headless --convert-to
+xlsx). O pacote libreoffice-calc não estava instalado no ambiente
+inicial (apenas libreoffice-core/common), o que impedia qualquer
+conversão; foi instalado via apt antes da conversão de mo2 e mo4.
+
+Mapa de classificação -> grupo (aba Resumo Grupos, tabela editável)
+construído por palavra-chave/regra fixa, consistente entre as 3
+lojas. A Neila pode reclassificar qualquer linha do mapa a qualquer
+momento; a linha "n/d / a revisar" acende sozinha se uma
+classificação nova aparecer sem grupo definido.
