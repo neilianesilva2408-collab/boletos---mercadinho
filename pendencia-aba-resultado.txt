@@ -1,0 +1,61 @@
+Pendência: aba "Resultado" (comparação venda x compra)
+Data: 2026-07-27
+
+O que foi pedido
+-----------------
+Para cada loja (mo1, mo2, mo4), criar uma aba "Resultado" com:
+1. Valor da venda de cada mês (fonte: um arquivo "venda anual", que
+   estaria na mesma pasta dos boletos).
+2. Uma coluna calculando o valor de compra sugerido para o mês
+   seguinte, com base na venda do mês seguinte x um percentual
+   editável (célula solta para a Neila digitar/mudar o % quando
+   quiser).
+3. Quanto foi comprado a mais em cada mês (compra real, vinda da aba
+   Resumo Mensal, menos a compra sugerida pelo % acima).
+4. No mês atual (mês corrente da data em que a planilha for gerada),
+   uma expectativa/projeção de venda baseada no que já foi vendido até
+   aquela data.
+
+Por que não foi feito ainda
+----------------------------
+Procurei em todo o repositório (arquivos locais, histórico do git) e
+no Google Drive conectado por "venda anual", "vendas", "faturamento" e
+variações, e não encontrei nenhum arquivo de vendas na mesma pasta dos
+boletos (nem em nenhuma pasta claramente ligada a este projeto). Os
+únicos arquivos de venda que apareceram no Drive são planilhas antigas
+de projeção diária (ago/2024, ex. "mo1.xlsx" de projeção de vendas),
+que não parecem ser a fonte pretendida e não têm venda mensal/anual
+consolidada nem estão na mesma pasta dos boletos.
+
+Como as fórmulas de compra sugerida, "comprei a mais" e expectativa de
+venda dependem diretamente do valor de venda mês a mês, não dá para
+montar a aba Resultado sem inventar números — por isso preferi não
+criar uma aba com fórmulas "bonitas" mas alimentadas com dado
+fictício.
+
+O que falta para eu continuar
+-------------------------------
+Neila, para eu montar a aba Resultado nas 3 planilhas (mo1, mo2, mo4),
+preciso que você suba (no próprio repositório do GitHub, na mesma
+pasta dos arquivos "boletos moX.xlsx") um arquivo com a venda mensal
+de cada loja — pode ser um único arquivo com uma aba por loja, ou um
+arquivo por loja (ex. "venda anual mo1.xlsx"), com pelo menos:
+- Mês/Ano
+- Valor da venda do mês
+
+Assim que esse arquivo existir no repositório, eu:
+- Leio a venda mês a mês de cada loja.
+- Crio a aba Resultado com Venda, % editável (célula separada, valor
+  inicial sugerido mas fácil de trocar), Compra Sugerida (Venda do mês
+  seguinte x %), Compra Real (puxada da Resumo Mensal), "Comprei a
+  mais" (Compra Real - Compra Sugerida), e a expectativa de venda do
+  mês corrente com base na venda acumulada até a data de geração da
+  planilha (projeção simples: venda acumulada / dias corridos do mês x
+  dias totais do mês, ajustável depois se a Neila preferir outro
+  método, ex. considerando dia da semana).
+
+O restante da tarefa (conversão .xls -> .xlsx, abas de análise
+Mercadorias Revenda / Resumo Diário / Resumo Mensal / Resumo
+Classificação / Resumo Grupos, recalc.py, commit e push das 3 lojas)
+já estava concluído em execução anterior — ver
+analise-lojas-01-02-04.txt e o histórico de commits.
