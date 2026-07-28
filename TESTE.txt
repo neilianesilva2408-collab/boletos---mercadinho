@@ -1,4 +1,0 @@
-TESTE
-Verificação de push/pull do pipeline boletos-mercadinho-daily.
-Data/hora: 2026-07-28T15:23:34-04:00
-Se este arquivo apareceu no GitHub, o push automático da tarefa agendada esta funcionando.
