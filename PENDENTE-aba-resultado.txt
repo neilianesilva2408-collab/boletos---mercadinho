@@ -1,0 +1,52 @@
+Pendência: aba "Resultado" (valor de venda + projeção de compra)
+Timestamp: 2026-07-28
+
+O que foi pedido:
+Em cada planilha de loja (boletos mo1.xlsx, mo2.xlsx, mo4.xlsx), criar uma
+aba "Resultado" com:
+1. Valor da venda de cada mês, puxado de um arquivo "venda anual" que
+   estaria na mesma pasta.
+2. Uma coluna que calcula o valor de compra para o mês seguinte, baseado na
+   venda do mês seguinte, com uma célula de percentual editável (a Neila
+   muda esse percentual quando quiser).
+3. Quanto foi comprado a mais em cada mês, comparando a compra real do mês
+   (Mercadorias P/Revenda, já calculada na aba Resumo Mensal) com o valor
+   que a fórmula do item 2 indicava que deveria ter sido comprado.
+4. Uma expectativa de venda para o mês corrente, baseada no que já foi
+   vendido até a data em que a planilha for gerada.
+
+Por que não foi feito:
+Não existe nenhum arquivo de vendas na base disponível para gerar a aba.
+Verificado:
+- Repositório boletos---mercadinho: todos os arquivos (working tree,
+  todas as branches, todo o histórico de commits) — só existem os 3
+  arquivos de boletos (contas a pagar), nenhum arquivo de venda.
+- Google Drive conectado: busca por "venda anual", "venda", "vendas",
+  "anual", combinado com "mo1"/"mo2"/"mo4"/"loja"/"mercadinho"/"oliveira"
+  — não encontrou nenhum arquivo correspondente.
+  Encontrados apenas 2 arquivos antigos e não relacionados: "mo1.xlsx" e
+  "mo4.xlsx" no Drive (criados em 08/2024), que são planilhas de
+  "Projeção de Vendas" de um único mês (agosto/2024), não uma base de
+  venda anual, e não têm um arquivo equivalente para mo2. Não usei esses
+  arquivos porque não correspondem ao que foi descrito ("venda anual", na
+  mesma pasta dos boletos) e estão desatualizados (quase 2 anos).
+
+O que falta para eu concluir esta parte:
+Um arquivo (ou um arquivo por loja) com o valor de venda real por mês
+(idealmente também por dia, para calcular a expectativa de venda do mês
+corrente com base no que já vendeu até a data), cobrindo o mesmo período
+das planilhas de boletos (dados de vencimento em 07/2026 a 09/2026).
+Assim que esse arquivo estiver disponível no repositório (ou me for
+indicado onde está), eu construo a aba "Resultado" em cada planilha,
+com fórmula ligada à base de vendas (nunca valor fixo), incluindo:
+- Célula de percentual editável e destacada (para o cálculo de compra do
+  mês seguinte).
+- Comparativo "comprado a mais" mês a mês.
+- Expectativa de venda do mês corrente, calculada a partir da venda
+  acumulada até a data de execução.
+
+Nenhum dado de venda foi inventado ou estimado sem fonte. As abas já
+existentes (Mercadorias Revenda, Resumo Diário, Resumo Mensal, Resumo
+Classificação, Resumo Grupos), geradas na execução anterior
+(2026-07-27), permanecem intactas e sem erros — verificado novamente
+nesta execução (0 células de erro em qualquer aba nos 3 arquivos).
