@@ -61,6 +61,30 @@ Loja 04 (boletos mo4.xls / boletos mo4.xlsx)
 - Linha "n/d / a revisar": R$ 0,00 - APAGADA.
 - Comprado a Mais: -R$ 894.172,26. Percentual em $E$3: 100,68%.
 
+Resumo Diário agora é só caixa de verdade
+
+A pedido da Neila, contas de previsão/provisão deixaram de entrar na
+aba Resumo Diário - elas não são pagamento no dia e distorciam o
+fluxo. As demais abas (Mensal, Classificação, Grupos) continuam
+somando tudo.
+
+Exemplo do estrago que isso causava na Loja 04:
+  17/08/2026 aparecia com R$ 119.609,86 - o desembolso real era
+  R$ 19.609,86 (R$ 100 mil eram prévia de empréstimo).
+
+A lista do que não entra é EDITÁVEL pela Neila: aba Resumo Grupos,
+coluna AE, a partir da linha 3. Hoje contém só PREVIA DOS
+EMPRESTIMOS. É só digitar outra classificação na coluna que tudo
+recalcula sozinho - e a lista é preservada nas próximas execuções.
+
+Como a Resumo Diário deixa de bater com o TOTAL GERAL, a própria aba
+mostra a conferência no topo: H1/I1 = valor excluído, H2/I2 = total
+cheio. A reconciliação passa a ser fluxo + excluído = TOTAL GERAL.
+
+  Loja 01: fluxo R$ 2.214.607,18 + excluído R$ 250.000,00 = R$ 2.464.607,18
+  Loja 02: fluxo R$   617.859,23 + excluído R$        0,00 = R$   617.859,23
+  Loja 04: fluxo R$   978.633,75 + excluído R$ 350.000,00 = R$ 1.328.633,75
+
 Mapa de grupos - pendência resolvida de forma definitiva
 
 A linha "n/d / a revisar" vinha acendendo em todas as execuções
