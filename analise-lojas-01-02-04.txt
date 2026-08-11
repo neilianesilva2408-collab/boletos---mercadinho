@@ -1,146 +1,121 @@
-Análise de boletos - lojas 01, 02 e 04 - 2026-08-05
+Análise de boletos - lojas 01, 02 e 04 - 2026-08-11
 
 Resumo da execução automatizada:
 
-ATENÇÃO - duas correções importantes nesta execução (ler antes dos números)
-
-1) TOTAL GERAL estava subestimado nos arquivos de ontem. Os valores
-   exibidos nas abas de resumo estavam desatualizados em relação à
-   própria base (cache de fórmula sem recálculo final no commit de
-   04/08). Diferença encontrada: Loja 01 faltavam R$ 537.886,25 e
-   Loja 04 faltavam R$ 385.721,11. Hoje os números foram conferidos
-   por soma independente da coluna "Valor do Título" da base, e batem
-   exatamente com o TOTAL GERAL das abas. Os totais abaixo são os
-   corretos; não compare direto com o resumo de ontem.
-
-2) O export .xls cobre só uma janela recente, não a base inteira. O
-   arquivo enviado hoje cobre 01/08/2026 a 30/09/2026, enquanto a
-   análise já acumulava lançamentos desde 27/06/2026. Substituir a
-   base pelo export teria apagado todo o histórico de junho e julho
-   (~R$ 1,4 mi só na Loja 01). Por isso foi feito merge: mantido o
-   histórico anterior a 01/08 e substituída a janela de agosto em
-   diante pelo export novo (que é a versão autoritativa do período,
-   já com correções e inclusões).
+O export .xls novo cobre 01/07/2026 a 31/10/2026. A análise já
+acumulava lançamentos desde 27/06/2026, então foi feito merge: mantido
+o histórico anterior a 01/07 e substituída a janela de julho em diante
+pelo export novo (que é a versão autoritativa do período, já com
+correções e inclusões). Nenhum histórico foi perdido.
 
 Loja 01 (boletos mo1.xls / boletos mo1.xlsx)
-- 1392 lançamentos (979 de histórico mantido + 413 do export novo),
-  cobrindo 27/06/2026 a 30/09/2026.
-- 61 classificações únicas de CC Contra Partida.
-- Total geral: R$ 2.464.607,18 (Mercadorias P/Revenda: R$ 1.432.647,97)
-- Mercadorias Revenda: 1049 linhas.
-- Abas atualizadas: Mercadorias Revenda, Resumo Diário, Resumo Mensal,
-  Resumo Classificação, Resumo Grupos. Venda Anual (Base) e Resultado
-  preservadas, só conferidas.
+- 1569 lançamentos (105 de histórico mantido + 1464 do export novo),
+  cobrindo 27/06/2026 a 30/10/2026.
+- 62 classificações únicas de CC Contra Partida.
+- Total geral (fluxo): R$ 2.500.659,09
+  (Mercadorias P/Revenda: R$ 1.544.968,22)
+- Mercadorias Revenda: 1147 linhas.
 - Reconciliação: TOTAL GERAL = Resumo Classificação = Resumo Mensal =
-  Resumo Diário = R$ 2.464.607,18, conferido mês a mês. 0 erros de
-  fórmula.
-- Linha "n/d / a revisar": R$ 0,00 - APAGADA (ver seção de grupos).
-- Aba Resultado (Venda x Compra): "Comprado a Mais" no período com
-  dado comparável = -R$ 1.493.076,68 (ou seja, comprou R$ 1,49 mi a
-  MENOS que a compra sugerida). Percentual em $E$3: 85,84%.
+  Resumo Diário = R$ 2.500.659,09, conferido mês a mês. 0 erros de
+  fórmula (12.231 fórmulas recalculadas).
+- Linha "n/d / a revisar": R$ 0,00 em todos os meses - APAGADA.
+- Excluído do fluxo (PREVIA DOS EMPRESTIMOS): R$ 250.000,00.
+  Total cheio: R$ 2.750.659,09.
+- Aba Resultado (Venda x Compra): "Comprado a Mais" total =
+  -R$ 1.380.756,43 (comprou a MENOS que o sugerido).
+  Percentual em $E$3: 85,84%.
 
 Loja 02 (boletos mo2.xls / boletos mo2.xlsx)
-- 739 lançamentos (539 de histórico mantido + 200 do export novo),
-  cobrindo 27/06/2026 a 28/09/2026.
-- 42 classificações únicas.
-- Total geral: R$ 617.859,23 (Mercadorias P/Revenda: R$ 479.399,22)
-- Mercadorias Revenda: 581 linhas.
-- Reconciliação OK em todas as abas (R$ 617.859,23), conferida mês a
-  mês. 0 erros de fórmula.
+- 826 lançamentos (59 de histórico mantido + 767 do export novo),
+  cobrindo 27/06/2026 a 26/10/2026.
+- 43 classificações únicas.
+- Total geral (fluxo): R$ 692.021,11
+  (Mercadorias P/Revenda: R$ 515.359,53)
+- Mercadorias Revenda: 625 linhas.
+- Reconciliação OK em todas as abas (R$ 692.021,11), conferida mês a
+  mês. 0 erros de fórmula (8.138 fórmulas).
 - Linha "n/d / a revisar": R$ 0,00 - APAGADA.
-- Comprado a Mais: -R$ 450.920,60. Percentual em $E$3: 88,71%.
+- Excluído do fluxo: R$ 0,00 (a loja 02 não tem PREVIA DOS
+  EMPRESTIMOS lançada).
+- Comprado a Mais total: -R$ 414.960,29. Percentual em $E$3: 88,71%.
 
 Loja 04 (boletos mo4.xls / boletos mo4.xlsx)
-- 1043 lançamentos (740 de histórico mantido + 303 do export novo),
-  cobrindo 27/06/2026 a 25/09/2026.
+- 1185 lançamentos (78 de histórico mantido + 1107 do export novo),
+  cobrindo 27/06/2026 a 25/10/2026.
 - 42 classificações únicas.
-- Total geral: R$ 1.328.633,75 (Mercadorias P/Revenda: R$ 702.061,59)
-- Mercadorias Revenda: 789 linhas.
-- Reconciliação OK em todas as abas (R$ 1.328.633,75), conferida mês a
-  mês. 0 erros de fórmula.
+- Total geral (fluxo): R$ 1.113.960,03
+  (Mercadorias P/Revenda: R$ 767.168,93)
+- Mercadorias Revenda: 865 linhas.
+- Reconciliação OK em todas as abas (R$ 1.113.960,03), conferida mês a
+  mês. 0 erros de fórmula (9.790 fórmulas).
 - Linha "n/d / a revisar": R$ 0,00 - APAGADA.
-- Comprado a Mais: -R$ 894.172,26. Percentual em $E$3: 100,68%.
+- Excluído do fluxo (PREVIA DOS EMPRESTIMOS): R$ 475.000,00 (subiu de
+  R$ 350.000 da execução anterior). Total cheio: R$ 1.588.960,03.
+- Comprado a Mais total: -R$ 829.064,92. Percentual em $E$3: 100,68%.
 
-Resumo Diário agora é só caixa de verdade
+Classificações novas nesta execução - CONFERIR
 
-A pedido da Neila, contas de previsão/provisão deixaram de entrar na
-aba Resumo Diário - elas não são pagamento no dia e distorciam o
-fluxo. As demais abas (Mensal, Classificação, Grupos) continuam
-somando tudo.
+Surgiu ICMS S/ VENDAS nas TRÊS lojas, e não existia grupo definido
+para ela em nenhuma delas. Foi atribuída pela natureza contábil:
 
-Exemplo do estrago que isso causava na Loja 04:
-  17/08/2026 aparecia com R$ 119.609,86 - o desembolso real era
-  R$ 19.609,86 (R$ 100 mil eram prévia de empréstimo).
+  ICMS S/ VENDAS -> Impostos   (MO1, MO2 e MO4)
 
-A lista do que não entra é EDITÁVEL pela Neila: aba Resumo Grupos,
-coluna AE, a partir da linha 3. Hoje contém só PREVIA DOS
+Na Loja 01 apareceu também IOF - OPERACOES FINANCEIRAS, que não estava
+no mapa dela. Foi reaproveitado o grupo que a Neila já tinha escolhido
+nas lojas 02 e 04:
+
+  IOF - OPERACOES FINANCEIRAS -> Despesa   (MO1)
+
+Os dois são EDITÁVEIS na coluna AC da aba Resumo Grupos. Se mudar o
+grupo lá, todas as abas recalculam sozinhas.
+
+Lista de exclusão do Resumo Diário
+
+Continua editável na aba Resumo Grupos, coluna AE, a partir da linha 3.
+A lista existente foi preservada - hoje contém só PREVIA DOS
 EMPRESTIMOS. É só digitar outra classificação na coluna que tudo
-recalcula sozinho - e a lista é preservada nas próximas execuções.
+recalcula sozinho.
 
-Como a Resumo Diário deixa de bater com o TOTAL GERAL, a própria aba
-mostra a conferência no topo: H1/I1 = valor excluído, H2/I2 = total
-cheio. A reconciliação passa a ser fluxo + excluído = TOTAL GERAL.
+Conferência de fluxo + excluído = TOTAL GERAL:
 
-  Loja 01: fluxo R$ 2.214.607,18 + excluído R$ 250.000,00 = R$ 2.464.607,18
-  Loja 02: fluxo R$   617.859,23 + excluído R$        0,00 = R$   617.859,23
-  Loja 04: fluxo R$   978.633,75 + excluído R$ 350.000,00 = R$ 1.328.633,75
-
-Mapa de grupos - pendência resolvida de forma definitiva
-
-A linha "n/d / a revisar" vinha acendendo em todas as execuções
-anteriores porque cada loja era tratada isoladamente. Como a Neila
-classifica a mesma categoria do mesmo jeito nas três lojas, o
-mapeamento que ela já tinha feito numa loja foi reaproveitado nas
-outras. Isso resolveu 9 das 14 pendências sem inventar nada:
-
-  Loja 01: CAPITALIZACAO BANCO -> Despesa
-           DESPESAS ACOUGUE -> Despesa
-           IRPJ A PAGAR -> Despesa
-           PIS / COFINS / CSLL RETIDO A RECOLHER -> Despesa
-  Loja 02: AGUA -> Despesa
-           ALIMENTACAO -> Despesa
-           AMORTIZACAO GARANTIDA BANCO -> Despesa
-           JUROS S/ EMPRESTIMOS -> Empréstimo
-           PIS / COFINS / CSLL RETIDO A RECOLHER -> Despesa
-
-As 5 restantes não tinham grupo em NENHUMA das três lojas. Foram
-classificadas pela natureza contábil. CONFERIR - é editável na coluna
-AC da aba Resumo Grupos, e se mudar, tudo recalcula sozinho:
-
-  PREVIA DOS EMPRESTIMOS -> Empréstimo   (R$ 250.000 MO1 + R$ 350.000 MO4)
-  PROVISAO CSLL          -> Impostos
-  FERIAS A PAGAR         -> Salários
-  MAO DE OBRA            -> Salários
-  DIARIAS                -> Salários
-
-O valor de PREVIA DOS EMPRESTIMOS é alto (R$ 600 mil somando as duas
-lojas) e sozinho respondia pela maior parte do "n/d" aceso. Vale
-confirmar se o grupo Empréstimo é mesmo o certo para essa conta.
+  Loja 01: fluxo R$ 2.500.659,09 + excluído R$ 250.000,00 = R$ 2.750.659,09
+  Loja 02: fluxo R$   692.021,11 + excluído R$        0,00 = R$   692.021,11
+  Loja 04: fluxo R$ 1.113.960,03 + excluído R$ 475.000,00 = R$ 1.588.960,03
 
 Leitura rápida dos números
 
-- As três lojas estão comprando bem ABAIXO da compra sugerida pela
-  regra do percentual sobre a venda do mês anterior: -R$ 1,49 mi
-  (MO1), -R$ 894 mil (MO4) e -R$ 451 mil (MO2). Boa parte disso é
-  efeito de junho, que só tem meia base (histórico começa em 27/06),
-  e de agosto/setembro, que ainda estão em andamento - não são meses
-  fechados. A comparação só fica confiável em julho, que é o único
-  mês inteiro: MO1 -R$ 108 mil, MO2 -R$ 12,7 mil, MO4 -R$ 126,8 mil.
-  Mesmo assim, as três compraram menos que o sugerido em julho.
-- A venda de agosto ainda está zerada na aba Venda Anual (Base) nas
-  três lojas - a data de corte do relatório de venda é 27/07/2026.
-  Enquanto essa base não for atualizada, a Compra Sugerida de
-  setembro sai zerada e o comparativo de agosto/setembro fica
-  incompleto.
+- Julho continua sendo o ÚNICO mês inteiro comparável (junho tem meia
+  base, o histórico começa em 27/06). Em julho as três compraram menos
+  que o sugerido, mas a MO2 chegou perto do alvo:
+
+    MO1: sugerido R$ 1.015.711,76 / real R$ 907.315,63 -> -R$ 108.396,13
+    MO2: sugerido R$   312.759,02 / real R$ 300.056,13 -> -R$  12.702,89
+    MO4: sugerido R$   576.927,50 / real R$ 449.494,32 -> -R$ 127.433,18
+
+- A MO4 é a que mais se afasta do alvo em julho (-22% da compra
+  sugerida), e é justamente a loja com o percentual mais alto em $E$3
+  (100,68%). Vale checar se esse percentual está calibrado ou se a
+  compra dela está mesmo apertada.
+
+- ATENÇÃO na leitura de Set/Out: aparecem com "Comprado a Mais"
+  POSITIVO (MO1 R$ 43.328 e R$ 1.231; MO2 R$ 6.275; MO4 R$ 15.736 e
+  R$ 4.044). Isso NÃO é compra a mais de verdade - é compra lançada
+  sem venda-base para comparar. A aba Venda Anual (Base) só tem dados
+  até Jul/2026 nas três lojas (data de corte do relatório de venda:
+  27/07/2026). Enquanto essa base não for atualizada, a Compra
+  Sugerida de setembro em diante sai zerada e o total de "Comprado a
+  Mais" fica contaminado.
+
+- Para o comparativo voltar a fazer sentido em agosto/setembro, é
+  preciso exportar o relatório de venda anual novo (VENDA ANUAL MO1/
+  MO2/MO4.xls) e atualizar a aba Venda Anual (Base).
 
 Nota sobre o ambiente desta execução
 
 Esta máquina não tem Python nem Node instalados. A execução usou o
 Python embutido do LibreOffice (C:\Program Files\LibreOffice\program\
 python.exe), que já traz openpyxl, com o soffice adicionado ao PATH.
-Foi necessário corrigir office/soffice.py do skill de xlsx, que
-testava socket.AF_UNIX (inexistente no Windows) e quebrava o
-recalc.py. Conversão .xls -> .xlsx via LibreOffice headless. O
-recálculo e a checagem de 0 erros foram feitos com recalc.py, e a
-reconciliação foi conferida lendo os valores calculados de volta do
-arquivo, batendo nas 3 lojas.
+Conversão .xls -> .xlsx via LibreOffice headless. O recálculo e a
+checagem de 0 erros foram feitos com recalc.py, e a reconciliação foi
+conferida lendo os valores calculados de volta do arquivo, batendo nas
+3 lojas.
