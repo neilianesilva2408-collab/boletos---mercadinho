@@ -1,121 +1,150 @@
-Análise de boletos - lojas 01, 02 e 04 - 2026-08-11
+ANALISE DE BOLETOS - MERCADINHO OLIVEIRA (LOJAS 01, 02 e 04)
+Atualizado em: 14/08/2026
+Fonte: boletos mo1.xls / mo2.xls / mo4.xls (export de 13/08/2026 08:53)
+====================================================================
 
-Resumo da execução automatizada:
+JANELA DE DADOS
+  O export novo cobre 01/06/2026 a 31/10/2026 - janela MAIS AMPLA que a
+  analise anterior (que comecava em 27/06/2026). Nenhuma linha de historico
+  foi perdida: o export e superconjunto do que ja existia.
 
-O export .xls novo cobre 01/07/2026 a 31/10/2026. A análise já
-acumulava lançamentos desde 27/06/2026, então foi feito merge: mantido
-o histórico anterior a 01/07 e substituída a janela de julho em diante
-pelo export novo (que é a versão autoritativa do período, já com
-correções e inclusões). Nenhum histórico foi perdido.
+--------------------------------------------------------------------
+LOJA 01  (MO1)
+--------------------------------------------------------------------
+  TOTAL GERAL (entra no fluxo).......: R$ 3.787.723,62
+  Mercadorias P/Revenda.............: R$ 2.461.754,92  (65.0% do total)
+  Outras despesas...................: R$ 1.325.968,70
+  Excluido do fluxo (PREVIA DOS EMPRESTIMOS): R$ 250.000,00
+  TOTAL GERAL CHEIO (fluxo + excluido): R$ 4.037.723,62
+  Nº de lancamentos.................: 2357
+  Nº de lancamentos de mercadoria...: 1753
+  Nº de classificacoes (CC Contra Partida): 71
 
-Loja 01 (boletos mo1.xls / boletos mo1.xlsx)
-- 1569 lançamentos (105 de histórico mantido + 1464 do export novo),
-  cobrindo 27/06/2026 a 30/10/2026.
-- 62 classificações únicas de CC Contra Partida.
-- Total geral (fluxo): R$ 2.500.659,09
-  (Mercadorias P/Revenda: R$ 1.544.968,22)
-- Mercadorias Revenda: 1147 linhas.
-- Reconciliação: TOTAL GERAL = Resumo Classificação = Resumo Mensal =
-  Resumo Diário = R$ 2.500.659,09, conferido mês a mês. 0 erros de
-  fórmula (12.231 fórmulas recalculadas).
-- Linha "n/d / a revisar": R$ 0,00 em todos os meses - APAGADA.
-- Excluído do fluxo (PREVIA DOS EMPRESTIMOS): R$ 250.000,00.
-  Total cheio: R$ 2.750.659,09.
-- Aba Resultado (Venda x Compra): "Comprado a Mais" total =
-  -R$ 1.380.756,43 (comprou a MENOS que o sugerido).
-  Percentual em $E$3: 85,84%.
+  Por grupo (periodo todo):
+    Mercadoria                                R$ 2.461.754,92
+    Pagamentos outros não operacionais          R$ 459.983,20
+    Empréstimo                                  R$ 343.454,31
+    Despesa                                     R$ 280.425,37
+    Salários                                    R$ 173.718,47
+    Impostos                                     R$ 66.391,85
+    Cobertura de conta                            R$ 1.995,50
+    n/d / a revisar                                   R$ 0,00
 
-Loja 02 (boletos mo2.xls / boletos mo2.xlsx)
-- 826 lançamentos (59 de histórico mantido + 767 do export novo),
-  cobrindo 27/06/2026 a 26/10/2026.
-- 43 classificações únicas.
-- Total geral (fluxo): R$ 692.021,11
-  (Mercadorias P/Revenda: R$ 515.359,53)
-- Mercadorias Revenda: 625 linhas.
-- Reconciliação OK em todas as abas (R$ 692.021,11), conferida mês a
-  mês. 0 erros de fórmula (8.138 fórmulas).
-- Linha "n/d / a revisar": R$ 0,00 - APAGADA.
-- Excluído do fluxo: R$ 0,00 (a loja 02 não tem PREVIA DOS
-  EMPRESTIMOS lançada).
-- Comprado a Mais total: -R$ 414.960,29. Percentual em $E$3: 88,71%.
+  RECONCILIACAO: OK - TOTAL GERAL = soma dos grupos = Resumo Mensal =
+    Resumo Classificacao = Resumo Diario, conferido MES A MES.
+    Linha 'n/d / a revisar' zerada em todos os meses.
 
-Loja 04 (boletos mo4.xls / boletos mo4.xlsx)
-- 1185 lançamentos (78 de histórico mantido + 1107 do export novo),
-  cobrindo 27/06/2026 a 25/10/2026.
-- 42 classificações únicas.
-- Total geral (fluxo): R$ 1.113.960,03
-  (Mercadorias P/Revenda: R$ 767.168,93)
-- Mercadorias Revenda: 865 linhas.
-- Reconciliação OK em todas as abas (R$ 1.113.960,03), conferida mês a
-  mês. 0 erros de fórmula (9.790 fórmulas).
-- Linha "n/d / a revisar": R$ 0,00 - APAGADA.
-- Excluído do fluxo (PREVIA DOS EMPRESTIMOS): R$ 475.000,00 (subiu de
-  R$ 350.000 da execução anterior). Total cheio: R$ 1.588.960,03.
-- Comprado a Mais total: -R$ 829.064,92. Percentual em $E$3: 100,68%.
+  ABA RESULTADO (Venda x Compra) - percentual editavel $E$3 = 85.84%
+    Jun/2026: venda  R$ 1.183.261,60 | sugerida  R$ 1.039.935,79 | real    R$ 844.287,21 | dif   R$ -195.648,58
+    Jul/2026: venda  R$ 1.013.603,34 | sugerida  R$ 1.015.711,76 | real    R$ 907.938,13 | dif   R$ -107.773,63
+    Ago/2026: venda          R$ 0,00 | sugerida    R$ 870.077,11 | real    R$ 635.229,02 | dif   R$ -234.848,09
+    Set/2026: venda          R$ 0,00 | sugerida          R$ 0,00 | real     R$ 69.640,56 | dif     R$ 69.640,56
+    Out/2026: venda          R$ 0,00 | sugerida          R$ 0,00 | real      R$ 4.660,00 | dif      R$ 4.660,00
+    TOTAL COMPRADO A MENOS: R$ 463.969,73
 
-Classificações novas nesta execução - CONFERIR
+  Classificacoes novas mapeadas nesta rodada (editaveis em Resumo Grupos!AC):
+    AMORTIZACAO GARANTIDA BANCO                  -> Despesa      (reaproveitado da Loja 02)
+    CERTIFICADO DIGITAL                          -> Despesa      (novo)
+    IMPOSTOS E TAXAS A APROPRIAR                 -> Impostos     (novo)
+    JUROS PAGOS A FORNECEDORES                   -> Despesa      (novo)
+    MATERIA PRIMA                                -> Despesa      (novo)
+    MENSALIDADE SEGURANCA TRABAHO - EXCELLET     -> Despesa      (novo)
+    OUTROS CUSTOS PRODUCAO                       -> Despesa      (novo)
+    VEICULOS                                     -> Despesa      (novo)
 
-Surgiu ICMS S/ VENDAS nas TRÊS lojas, e não existia grupo definido
-para ela em nenhuma delas. Foi atribuída pela natureza contábil:
+--------------------------------------------------------------------
+LOJA 02  (MO2)
+--------------------------------------------------------------------
+  TOTAL GERAL (entra no fluxo).......: R$ 1.105.349,67
+  Mercadorias P/Revenda.............: R$ 797.280,92  (72.1% do total)
+  Outras despesas...................: R$ 308.068,75
+  Excluido do fluxo (PREVIA DOS EMPRESTIMOS): R$ 0,00
+  TOTAL GERAL CHEIO (fluxo + excluido): R$ 1.105.349,67
+  Nº de lancamentos.................: 1284
+  Nº de lancamentos de mercadoria...: 968
+  Nº de classificacoes (CC Contra Partida): 48
 
-  ICMS S/ VENDAS -> Impostos   (MO1, MO2 e MO4)
+  Por grupo (periodo todo):
+    Mercadoria                                  R$ 797.280,92
+    Despesa                                     R$ 160.588,04
+    Salários                                     R$ 57.898,63
+    Empréstimo                                   R$ 44.870,72
+    Pagamentos outros não operacionais           R$ 25.540,38
+    Impostos                                     R$ 19.170,98
+    n/d / a revisar                                   R$ 0,00
 
-Na Loja 01 apareceu também IOF - OPERACOES FINANCEIRAS, que não estava
-no mapa dela. Foi reaproveitado o grupo que a Neila já tinha escolhido
-nas lojas 02 e 04:
+  RECONCILIACAO: OK - TOTAL GERAL = soma dos grupos = Resumo Mensal =
+    Resumo Classificacao = Resumo Diario, conferido MES A MES.
+    Linha 'n/d / a revisar' zerada em todos os meses.
 
-  IOF - OPERACOES FINANCEIRAS -> Despesa   (MO1)
+  ABA RESULTADO (Venda x Compra) - percentual editavel $E$3 = 88.71%
+    Jun/2026: venda    R$ 352.563,43 | sugerida    R$ 322.617,27 | real    R$ 277.892,68 | dif    R$ -44.724,59
+    Jul/2026: venda    R$ 332.480,59 | sugerida    R$ 312.759,02 | real    R$ 300.056,13 | dif    R$ -12.702,89
+    Ago/2026: venda          R$ 0,00 | sugerida    R$ 294.943,53 | real    R$ 207.804,30 | dif    R$ -87.139,23
+    Set/2026: venda          R$ 0,00 | sugerida          R$ 0,00 | real     R$ 10.889,06 | dif     R$ 10.889,06
+    Out/2026: venda          R$ 0,00 | sugerida          R$ 0,00 | real        R$ 638,75 | dif        R$ 638,75
+    TOTAL COMPRADO A MENOS: R$ 133.038,90
 
-Os dois são EDITÁVEIS na coluna AC da aba Resumo Grupos. Se mudar o
-grupo lá, todas as abas recalculam sozinhas.
+  Classificacoes novas mapeadas nesta rodada (editaveis em Resumo Grupos!AC):
+    CERTIFICADO DIGITAL                          -> Despesa      (novo)
+    MENSALIDADE SEGURANCA TRABAHO - EXCELLET     -> Despesa      (novo)
+    MULTAS RECEBIDAS                             -> Despesa      (novo)
+    PLANOS DE SAUDE                              -> Salarios     (reaproveitado da Loja 01)
+    RESCISOES                                    -> Salarios     (reaproveitado da Loja 01/04)
 
-Lista de exclusão do Resumo Diário
+--------------------------------------------------------------------
+LOJA 04  (MO4)
+--------------------------------------------------------------------
+  TOTAL GERAL (entra no fluxo).......: R$ 1.629.019,30
+  Mercadorias P/Revenda.............: R$ 1.171.932,56  (71.9% do total)
+  Outras despesas...................: R$ 457.086,74
+  Excluido do fluxo (PREVIA DOS EMPRESTIMOS): R$ 475.000,00
+  TOTAL GERAL CHEIO (fluxo + excluido): R$ 2.104.019,30
+  Nº de lancamentos.................: 1773
+  Nº de lancamentos de mercadoria...: 1330
+  Nº de classificacoes (CC Contra Partida): 49
 
-Continua editável na aba Resumo Grupos, coluna AE, a partir da linha 3.
-A lista existente foi preservada - hoje contém só PREVIA DOS
-EMPRESTIMOS. É só digitar outra classificação na coluna que tudo
-recalcula sozinho.
+  Por grupo (periodo todo):
+    Mercadoria                                R$ 1.171.932,56
+    Despesa                                     R$ 192.092,22
+    Empréstimo                                   R$ 93.428,99
+    Salários                                     R$ 78.098,66
+    Pagamentos outros não operacionais           R$ 55.450,52
+    Impostos                                     R$ 38.016,35
+    n/d / a revisar                                   R$ 0,00
 
-Conferência de fluxo + excluído = TOTAL GERAL:
+  RECONCILIACAO: OK - TOTAL GERAL = soma dos grupos = Resumo Mensal =
+    Resumo Classificacao = Resumo Diario, conferido MES A MES.
+    Linha 'n/d / a revisar' zerada em todos os meses.
 
-  Loja 01: fluxo R$ 2.500.659,09 + excluído R$ 250.000,00 = R$ 2.750.659,09
-  Loja 02: fluxo R$   692.021,11 + excluído R$        0,00 = R$   692.021,11
-  Loja 04: fluxo R$ 1.113.960,03 + excluído R$ 475.000,00 = R$ 1.588.960,03
+  ABA RESULTADO (Venda x Compra) - percentual editavel $E$3 = 100.68%
+    Jun/2026: venda    R$ 573.030,89 | sugerida    R$ 573.456,36 | real    R$ 434.138,40 | dif   R$ -139.317,96
+    Jul/2026: venda    R$ 442.838,69 | sugerida    R$ 576.927,50 | real    R$ 449.494,32 | dif   R$ -127.433,18
+    Ago/2026: venda          R$ 0,00 | sugerida    R$ 445.849,99 | real    R$ 257.141,23 | dif   R$ -188.708,76
+    Set/2026: venda          R$ 0,00 | sugerida          R$ 0,00 | real     R$ 27.113,76 | dif     R$ 27.113,76
+    Out/2026: venda          R$ 0,00 | sugerida          R$ 0,00 | real      R$ 4.044,85 | dif      R$ 4.044,85
+    TOTAL COMPRADO A MENOS: R$ 424.301,29
 
-Leitura rápida dos números
+  Classificacoes novas mapeadas nesta rodada (editaveis em Resumo Grupos!AC):
+    ASO FUNCIONARIOS                             -> Salarios     (reaproveitado da Loja 01/02)
+    CERTIFICADO DIGITAL                          -> Despesa      (novo)
+    JUROS PAGOS A FORNECEDORES                   -> Despesa      (novo)
+    MENSALIDADE SEGURANCA TRABAHO - EXCELLET     -> Despesa      (novo)
+    TAXA ADM CARTOES                             -> Despesa      (novo)
+    TELEFONE A PAGAR                             -> Despesa      (novo)
 
-- Julho continua sendo o ÚNICO mês inteiro comparável (junho tem meia
-  base, o histórico começa em 27/06). Em julho as três compraram menos
-  que o sugerido, mas a MO2 chegou perto do alvo:
-
-    MO1: sugerido R$ 1.015.711,76 / real R$ 907.315,63 -> -R$ 108.396,13
-    MO2: sugerido R$   312.759,02 / real R$ 300.056,13 -> -R$  12.702,89
-    MO4: sugerido R$   576.927,50 / real R$ 449.494,32 -> -R$ 127.433,18
-
-- A MO4 é a que mais se afasta do alvo em julho (-22% da compra
-  sugerida), e é justamente a loja com o percentual mais alto em $E$3
-  (100,68%). Vale checar se esse percentual está calibrado ou se a
-  compra dela está mesmo apertada.
-
-- ATENÇÃO na leitura de Set/Out: aparecem com "Comprado a Mais"
-  POSITIVO (MO1 R$ 43.328 e R$ 1.231; MO2 R$ 6.275; MO4 R$ 15.736 e
-  R$ 4.044). Isso NÃO é compra a mais de verdade - é compra lançada
-  sem venda-base para comparar. A aba Venda Anual (Base) só tem dados
-  até Jul/2026 nas três lojas (data de corte do relatório de venda:
-  27/07/2026). Enquanto essa base não for atualizada, a Compra
-  Sugerida de setembro em diante sai zerada e o total de "Comprado a
-  Mais" fica contaminado.
-
-- Para o comparativo voltar a fazer sentido em agosto/setembro, é
-  preciso exportar o relatório de venda anual novo (VENDA ANUAL MO1/
-  MO2/MO4.xls) e atualizar a aba Venda Anual (Base).
-
-Nota sobre o ambiente desta execução
-
-Esta máquina não tem Python nem Node instalados. A execução usou o
-Python embutido do LibreOffice (C:\Program Files\LibreOffice\program\
-python.exe), que já traz openpyxl, com o soffice adicionado ao PATH.
-Conversão .xls -> .xlsx via LibreOffice headless. O recálculo e a
-checagem de 0 erros foram feitos com recalc.py, e a reconciliação foi
-conferida lendo os valores calculados de volta do arquivo, batendo nas
-3 lojas.
+====================================================================
+OBSERVACOES
+  1. Nenhuma classificacao ficou sem grupo. A linha 'n/d / a revisar' esta
+     zerada nas tres lojas, em todos os meses.
+  2. 'MATERIA PRIMA' (Loja 01) foi mapeada como Despesa, e nao Mercadoria,
+     para o grupo Mercadoria continuar batendo exatamente com a coluna
+     Mercadorias P/Revenda do Resumo Mensal/Diario (que filtra so
+     'MERCADORIAS P/REVENDA'). Se a Neila preferir tratar materia prima como
+     mercadoria, basta trocar em Resumo Grupos!AC - mas ai o grupo Mercadoria
+     passa a ficar R$ 930,70 acima da Compra Real da aba Resultado.
+  3. As tres lojas compraram ABAIXO da compra sugerida em Jun/Jul/Ago.
+     Set e Out ainda tem poucos boletos lancados - os numeros desses meses
+     sobem conforme os titulos entram.
+  4. A lista de exclusao do fluxo diario segue sendo so PREVIA DOS
+     EMPRESTIMOS, editavel em Resumo Grupos coluna AE.
