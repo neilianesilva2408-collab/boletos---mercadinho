@@ -1,143 +1,41 @@
-ANALISE DE BOLETOS - MERCADINHO OLIVEIRA (LOJAS 01, 02 e 04)
-Atualizado em: 20/08/2026
-Fonte: boletos mo1.xls / mo2.xls / mo4.xls (export de 20/08/2026 11:55, baixado em Downloads)
-====================================================================
+ATUALIZAÇÃO BOLETOS MERCADINHO OLIVEIRA - 24/08/2026
+======================================================
 
-JANELA DE DADOS
-  O export novo cobre 01/07/2026 a 31/10/2026 (mais recente que o anterior,
-  de 18/08). Aplicada a regra de merge: data de corte = 01/07/2026 em todas
-  as lojas. Historico anterior a essa data (Jun/2026 e antes) foi preservado
-  do arquivo anterior; tudo de Jul/2026 em diante veio integralmente do
-  export novo (inclui correcoes e novos lancamentos de Ago/Set/Out).
+PERÍODO: Jun 2026 - Out 2026
+DATA DO CORTE: 01/06/2026 (nova janela de export cobre integralmente de 01/06 a 31/10)
+HISTÓRICO ANTERIOR: 0 linhas preservadas (export novo cobre desde o início)
 
---------------------------------------------------------------------
-LOJA 01  (MO1)
---------------------------------------------------------------------
-  TOTAL GERAL (entra no fluxo).......: R$ 4.034.826,91
-  Mercadorias P/Revenda.............: R$ 2.676.174,16  (66.3% do total)
-  Outras despesas...................: R$ 1.358.652,75
-  Excluido do fluxo (PREVIA DOS EMPRESTIMOS): R$ 250.000,00
-  TOTAL GERAL CHEIO (fluxo + excluido): R$ 4.284.826,91
-  Nº de lancamentos.................: 2574
-  Nº de lancamentos de mercadoria...: 1931
-  Nº de classificacoes (CC Contra Partida): 69
+LOJA 01 (Multi-valor 1):
+  Total Geral (Jun-Out):       R$  4.250.272,83
+  Mercadorias P/Revenda:       R$  2.959.151,21  (69,6% do total)
+  Quantidade de lançamentos:   2.705
+  Classificações únicas:       69
+  Reconciliação:               ✓ BALANCEADA (RG = RM = RC por mês)
+  Classificações novas s/ grupo: MEDICINA DO TRABALHO (atribuída: Despesa)
 
-  Por grupo (periodo todo):
-    Mercadoria                                R$ 2.676.174,16
-    Pagamentos outros não operacionais          R$ 477.646,77
-    Empréstimo                                  R$ 343.454,31
-    Despesa                                     R$ 278.441,72
-    Salários                                    R$ 188.792,52
-    Impostos                                     R$ 68.321,93
-    Cobertura de conta                            R$ 1.995,50
-    n/d / a revisar                                   R$ 0,00
+LOJA 02 (Multi-valor 2):
+  Total Geral (Jun-Out):       R$  1.229.132,84
+  Mercadorias P/Revenda:       R$    741.874,19  (60,3% do total)
+  Quantidade de lançamentos:   1.436
+  Classificações únicas:       60
+  Reconciliação:               ✓ BALANCEADA (RG = RM = RC por mês)
+  Classificações novas s/ grupo: DEVOLUCAO DE VENDAS (atribuída: Despesa)
 
-  RECONCILIACAO: OK - TOTAL GERAL = soma dos grupos = Resumo Mensal =
-    Resumo Classificacao = Resumo Diario, conferido MES A MES (nenhuma
-    diferenca encontrada). Linha 'n/d / a revisar' zerada em todos os
-    meses. recalc.py: 0 erros (17.559 formulas).
+LOJA 04 (Conveniência):
+  Total Geral (Jun-Out):       R$  1.778.237,82
+  Mercadorias P/Revenda:       R$  1.092.638,48  (61,5% do total)
+  Quantidade de lançamentos:   1.962
+  Classificações únicas:       68
+  Reconciliação:               ✓ BALANCEADA (RG = RM = RC por mês)
+  Classificações novas s/ grupo: nenhuma
 
-  ABA RESULTADO (Venda x Compra) - percentual editavel $E$3 = 85.84% (preservado, nao alterado)
-    Jun/2026: venda  R$ 1.183.261,60 | sugerida  R$ 1.039.935,79 | real    R$ 844.287,21 | dif   R$ -195.648,58
-    Jul/2026: venda  R$ 1.013.603,34 | sugerida  R$ 1.015.711,76 | real    R$ 907.938,13 | dif   R$ -107.773,63
-    Ago/2026: venda          R$ 0,00 | sugerida    R$ 870.077,11 | real    R$ 763.932,24 | dif   R$ -106.144,87
-    Set/2026: venda          R$ 0,00 | sugerida          R$ 0,00 | real   R$ 152.519,80 | dif   R$ 152.519,80
-    Out/2026: venda          R$ 0,00 | sugerida          R$ 0,00 | real     R$ 7.496,78 | dif     R$ 7.496,78
-    TOTAL COMPRADO A MENOS: R$ 249.550,49
-    (Ago/Set/Out ainda sem venda lancada na Venda Anual (Base) para comparar)
+MAPA DE GRUPOS:
+  - Todos os grupos existentes foram preservados
+  - Cruzamento entre lojas: novas classificações em MO1/MO2 não encontradas em MO4
+  - Exclusão de fluxo diário: PREVIA DOS EMPRESTIMOS (apenas esta, conforme configuração)
+  - Abas de resumo (Diário, Mensal, Classificação, Grupos) batem entre si
 
-  Classificacoes novas nesta rodada: nenhuma (as 69 ja estavam mapeadas).
-
---------------------------------------------------------------------
-LOJA 02  (MO2)
---------------------------------------------------------------------
-  TOTAL GERAL (entra no fluxo).......: R$ 1.193.571,31
-  Mercadorias P/Revenda.............: R$ 881.634,33  (73.9% do total)
-  Outras despesas...................: R$ 311.936,98
-  Excluido do fluxo (PREVIA DOS EMPRESTIMOS): R$ 0,00
-  TOTAL GERAL CHEIO (fluxo + excluido): R$ 1.193.571,31
-  Nº de lancamentos.................: 1407
-  Nº de lancamentos de mercadoria...: 1076
-  Nº de classificacoes (CC Contra Partida): 48
-
-  Por grupo (periodo todo):
-    Mercadoria                                  R$ 881.634,33
-    Despesa                                     R$ 160.661,10
-    Salários                                     R$ 61.058,63
-    Empréstimo                                   R$ 44.870,72
-    Pagamentos outros não operacionais           R$ 26.860,81
-    Impostos                                     R$ 18.485,72
-    n/d / a revisar                                   R$ 0,00
-
-  RECONCILIACAO: OK - TOTAL GERAL = soma dos grupos = Resumo Mensal =
-    Resumo Classificacao = Resumo Diario, conferido MES A MES (nenhuma
-    diferenca encontrada). Linha 'n/d / a revisar' zerada em todos os
-    meses. recalc.py: 0 erros (11.234 formulas).
-
-  ABA RESULTADO (Venda x Compra) - percentual editavel $E$3 = 88.71% (preservado, nao alterado)
-    Jun/2026: venda    R$ 352.563,43 | sugerida    R$ 322.617,27 | real    R$ 277.892,68 | dif    R$ -44.724,59
-    Jul/2026: venda    R$ 332.480,59 | sugerida    R$ 312.759,02 | real    R$ 300.056,13 | dif    R$ -12.702,89
-    Ago/2026: venda          R$ 0,00 | sugerida    R$ 294.943,53 | real    R$ 251.199,12 | dif    R$ -43.744,41
-    Set/2026: venda          R$ 0,00 | sugerida          R$ 0,00 | real    R$ 51.847,65 | dif    R$ 51.847,65
-    Out/2026: venda          R$ 0,00 | sugerida          R$ 0,00 | real       R$ 638,75 | dif        R$ 638,75
-    TOTAL COMPRADO A MENOS: R$ 48.685,49
-    (Ago/Set/Out ainda sem venda lancada na Venda Anual (Base) para comparar)
-
-  Classificacoes novas nesta rodada: nenhuma (as 48 ja estavam mapeadas).
-
---------------------------------------------------------------------
-LOJA 04  (MO4)
---------------------------------------------------------------------
-  TOTAL GERAL (entra no fluxo).......: R$ 1.728.393,40
-  Mercadorias P/Revenda.............: R$ 1.264.863,28  (73.2% do total)
-  Outras despesas...................: R$ 463.530,12
-  Excluido do fluxo (PREVIA DOS EMPRESTIMOS): R$ 475.000,00
-  TOTAL GERAL CHEIO (fluxo + excluido): R$ 2.203.393,40
-  Nº de lancamentos.................: 1906
-  Nº de lancamentos de mercadoria...: 1449
-  Nº de classificacoes (CC Contra Partida): 48
-
-  Por grupo (periodo todo):
-    Mercadoria                                R$ 1.264.863,28
-    Despesa                                     R$ 193.541,77
-    Empréstimo                                   R$ 96.594,77
-    Salários                                     R$ 78.350,66
-    Pagamentos outros não operacionais           R$ 56.070,52
-    Impostos                                     R$ 38.972,40
-    n/d / a revisar                                   R$ 0,00
-
-  RECONCILIACAO: OK - TOTAL GERAL = soma dos grupos = Resumo Mensal =
-    Resumo Classificacao = Resumo Diario, conferido MES A MES (nenhuma
-    diferenca encontrada). Linha 'n/d / a revisar' zerada em todos os
-    meses. recalc.py: 0 erros (13.724 formulas).
-
-  ABA RESULTADO (Venda x Compra) - percentual editavel $E$3 = 100.68% (preservado, nao alterado)
-    Jun/2026: venda    R$ 573.030,89 | sugerida    R$ 573.456,36 | real    R$ 434.138,40 | dif   R$ -139.317,96
-    Jul/2026: venda    R$ 442.838,69 | sugerida    R$ 576.927,50 | real    R$ 449.494,32 | dif   R$ -127.433,18
-    Ago/2026: venda          R$ 0,00 | sugerida    R$ 445.849,99 | real    R$ 320.711,99 | dif   R$ -125.138,00
-    Set/2026: venda          R$ 0,00 | sugerida          R$ 0,00 | real    R$ 55.631,43 | dif    R$ 55.631,43
-    Out/2026: venda          R$ 0,00 | sugerida          R$ 0,00 | real     R$ 4.887,14 | dif     R$ 4.887,14
-    TOTAL COMPRADO A MENOS: R$ 331.370,57
-    (Ago/Set/Out ainda sem venda lancada na Venda Anual (Base) para comparar)
-
-  Classificacoes novas nesta rodada: nenhuma (as 48 ja estavam mapeadas).
-
-====================================================================
-OBSERVACOES
-  1. Nenhuma classificacao nova apareceu no export desta vez em nenhuma das
-     tres lojas - todo o mapa de Resumo Grupos!AB/AC foi reaproveitado sem
-     alteracoes. Linha 'n/d / a revisar' zerada nas tres lojas, todos os meses.
-  2. O export baixado desta vez cobria uma janela mais recente (a partir de
-     01/07/2026) do que o arquivo anterior (que cobria desde 01/06/2026).
-     Seguindo a regra de merge, os lancamentos de Junho/2026 foram mantidos
-     do arquivo anterior e tudo de Julho em diante foi substituido pela
-     versao mais atual (mais completa) trazida no export novo.
-  3. A lista de exclusao do fluxo diario segue sendo so PREVIA DOS
-     EMPRESTIMOS, editavel em Resumo Grupos coluna AE (nao alterada).
-  4. Aba Resultado conferida e preservada nas tres lojas - formulas de
-     Compra Sugerida seguem usando a venda do MES ANTERIOR x percentual
-     editavel em $E$3 (nao foram tocadas nem precisaram de correcao).
-  5. Ago/Set/Out ja mostram compra real registrada (mais boletos desses
-     meses ja lancados no sistema), mas ainda sem venda lancada na Venda
-     Anual (Base) para comparar - a coluna "Comprado a Mais/a Menos" fica
-     em branco para esses meses ate a Neila atualizar a base de venda anual.
+PRÓXIMOS PASSOS:
+  1. Revisar a aba "Resumo Grupos" coluna AC (Grupo editável) para as classificações novas
+  2. Confirmar se MEDICINA DO TRABALHO e DEVOLUCAO DE VENDAS devem estar em "Despesa" ou outro grupo
+  3. As planilhas já estão em C:\Users\Thay_\Downloads\download claude cowork\entregas\
