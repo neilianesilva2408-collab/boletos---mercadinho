@@ -49,6 +49,12 @@ VENDA ANUAL (BASE) — atualizada com "VENDA ANUAL MOx.xls" (extração 25/08/20
   - Ago/2026 (venda parcial, mês ainda em curso): MO1 R$ 718.621,75 -> R$ 900.646,78 | MO2 R$ 246.624,29 -> R$ 305.591,57 | MO4 R$ 313.843,89 -> R$ 387.194,16
   - Expectativa de Venda do Mês Corrente (projeção Ago, recalculada): MO1 R$ 1.116.802,01 | MO2 R$ 378.933,55 | MO4 R$ 480.120,76
 
-RECALC: 0 erros de fórmula nas 3 planilhas (18.581 / 11.688 / 15.551 fórmulas recalculadas em MO1/MO2/MO4)
+ITEM RECEBIDO (NOTA FISCAL) — replicado da MO4 para MO1 e MO2 (25/08/2026):
+  - Aba nova "Mov Entradas (Rel 10497)" em cada arquivo, carregada de "Movimentacao Geral de Entradas MOx.xls" (extração 25/08/2026 ~09:18)
+  - Colunas AB/AC na aba Report: AC extrai o número da NF do texto da Observação (padrão "NF <numero>"); AB cruza esse número com a coluna Nota da aba Mov Entradas e traz o Produto, ou "nao encontrado" se o boleto foi pago mas a nota ainda não apareceu na movimentação de entrada
+  - MO4 também foi recalculada do zero (o merge anterior de hoje tinha desalinhado essas colunas com as linhas novas)
+  - Lançamentos com NF identificável / não encontrados na movimentação: MO1 1.696 / 306 | MO2 983 / 165 | MO4 1.247 / 289
+
+RECALC: 0 erros de fórmula nas 3 planilhas (20.277 / 12.671 / 15.598 fórmulas recalculadas em MO1/MO2/MO4)
 
 ENTREGA: planilhas copiadas para C:\Users\Thay_\Downloads\download claude cowork\entregas\
