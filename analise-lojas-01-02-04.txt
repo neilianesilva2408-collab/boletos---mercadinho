@@ -1,41 +1,48 @@
-ATUALIZAÇÃO BOLETOS MERCADINHO OLIVEIRA - 24/08/2026
+ATUALIZAÇÃO BOLETOS MERCADINHO OLIVEIRA - 25/08/2026
 ======================================================
 
 PERÍODO: Jun 2026 - Out 2026
-DATA DO CORTE: 01/06/2026 (nova janela de export cobre integralmente de 01/06 a 31/10)
-HISTÓRICO ANTERIOR: 0 linhas preservadas (export novo cobre desde o início)
+DATA DO CORTE: 01/06/2026 (nova janela de export cobre integralmente de 01/06 a 31/10, extração 25/08/2026 09:17)
+HISTÓRICO ANTERIOR: 0 linhas preservadas (export novo cobre desde o início, igual à atualização anterior)
 
 LOJA 01 (Multi-valor 1):
-  Total Geral (Jun-Out):       R$  4.250.272,83
-  Mercadorias P/Revenda:       R$  2.959.151,21  (69,6% do total)
-  Quantidade de lançamentos:   2.705
-  Classificações únicas:       69
-  Reconciliação:               ✓ BALANCEADA (RG = RM = RC por mês)
-  Classificações novas s/ grupo: MEDICINA DO TRABALHO (atribuída: Despesa)
+  Total Geral (Jun-Out):       R$  4.275.156,88
+  Mercadorias P/Revenda:       R$  2.831.902,23  (66,2% do total)
+  Quantidade de lançamentos:   2.729
+  Classificações únicas:       70
+  Reconciliação:               OK BALANCEADA (Resumo Grupos = Resumo Mensal = Resumo Classificação, mês a mês)
+  Classificações novas s/ grupo: nenhuma
+  Comprado a Mais/a Menos (aba Resultado, Jun-Out): R$ -848.270,49 (comprou a menos que a sugestão no período)
 
 LOJA 02 (Multi-valor 2):
-  Total Geral (Jun-Out):       R$  1.229.132,84
-  Mercadorias P/Revenda:       R$    741.874,19  (60,3% do total)
-  Quantidade de lançamentos:   1.436
-  Classificações únicas:       60
-  Reconciliação:               ✓ BALANCEADA (RG = RM = RC por mês)
-  Classificações novas s/ grupo: DEVOLUCAO DE VENDAS (atribuída: Despesa)
+  Total Geral (Jun-Out):       R$  1.235.166,28
+  Mercadorias P/Revenda:       R$    920.624,08  (74,5% do total)
+  Quantidade de lançamentos:   1.444
+  Classificações únicas:       49
+  Reconciliação:               OK BALANCEADA (Resumo Grupos = Resumo Mensal = Resumo Classificação, mês a mês)
+  Classificações novas s/ grupo: nenhuma
+  Comprado a Mais/a Menos (aba Resultado, Jun-Out): R$ -280.342,67 (comprou a menos que a sugestão no período)
 
 LOJA 04 (Conveniência):
-  Total Geral (Jun-Out):       R$  1.778.237,82
-  Mercadorias P/Revenda:       R$  1.092.638,48  (61,5% do total)
-  Quantidade de lançamentos:   1.962
-  Classificações únicas:       68
-  Reconciliação:               ✓ BALANCEADA (RG = RM = RC por mês)
+  Total Geral (Jun-Out):       R$  1.793.174,24
+  Mercadorias P/Revenda:       R$  1.325.162,00  (73,9% do total)
+  Quantidade de lançamentos:   1.980
+  Classificações únicas:       48
+  Reconciliação:               OK BALANCEADA (Resumo Grupos = Resumo Mensal = Resumo Classificação, mês a mês)
   Classificações novas s/ grupo: nenhuma
+  Comprado a Mais/a Menos (aba Resultado, Jun-Out): R$ -54.449,39 (comprou a menos que a sugestão no período)
 
 MAPA DE GRUPOS:
-  - Todos os grupos existentes foram preservados
-  - Cruzamento entre lojas: novas classificações em MO1/MO2 não encontradas em MO4
-  - Exclusão de fluxo diário: PREVIA DOS EMPRESTIMOS (apenas esta, conforme configuração)
-  - Abas de resumo (Diário, Mensal, Classificação, Grupos) batem entre si
+  - Todos os grupos existentes foram preservados (coluna AC de Resumo Grupos intacta)
+  - Nenhuma classificação nova apareceu no export desta vez; linha "n/d / a revisar" ficou em R$ 0,00 em todos os meses, nas 3 lojas
+  - Exclusão de fluxo diário: PREVIA DOS EMPRESTIMOS (única, conforme configuração da Neila em Resumo Grupos!AE)
+  - Abas de resumo (Diário, Mensal, Classificação, Grupos) batem entre si em cada loja
 
-PRÓXIMOS PASSOS:
-  1. Revisar a aba "Resumo Grupos" coluna AC (Grupo editável) para as classificações novas
-  2. Confirmar se MEDICINA DO TRABALHO e DEVOLUCAO DE VENDAS devem estar em "Despesa" ou outro grupo
-  3. As planilhas já estão em C:\Users\Thay_\Downloads\download claude cowork\entregas\
+ABA RESULTADO (Venda x Compra):
+  - Estrutura preservada (não recriada), incluindo as colunas de Tendência, Dias de Estoque e Compra Ajustada adicionadas em 24/08/2026
+  - Valores de Compra Real atualizados automaticamente com os novos dados de Jun-Out
+  - Venda do Mes ainda não disponível para Set/Out/2026 na aba "Venda Anual (Base)" — normal, é atualizada separadamente quando a Neila fornecer o relatório de venda anual
+
+RECALC: 0 erros de fórmula nas 3 planilhas (18.581 / 11.688 / 15.551 fórmulas recalculadas em MO1/MO2/MO4)
+
+ENTREGA: planilhas copiadas para C:\Users\Thay_\Downloads\download claude cowork\entregas\
