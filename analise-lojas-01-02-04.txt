@@ -43,6 +43,12 @@ ABA RESULTADO (Venda x Compra):
   - Valores de Compra Real atualizados automaticamente com os novos dados de Jun-Out
   - Venda do Mes ainda não disponível para Set/Out/2026 na aba "Venda Anual (Base)" — normal, é atualizada separadamente quando a Neila fornecer o relatório de venda anual
 
+VENDA ANUAL (BASE) — atualizada com "VENDA ANUAL MOx.xls" (extração 25/08/2026, ~09:17):
+  - Data de corte movida de 20/08/2026 para 25/08/2026 nas 3 lojas
+  - Jan-Jul/2026: sem alteração (valores já batiam com o relatório novo)
+  - Ago/2026 (venda parcial, mês ainda em curso): MO1 R$ 718.621,75 -> R$ 900.646,78 | MO2 R$ 246.624,29 -> R$ 305.591,57 | MO4 R$ 313.843,89 -> R$ 387.194,16
+  - Expectativa de Venda do Mês Corrente (projeção Ago, recalculada): MO1 R$ 1.116.802,01 | MO2 R$ 378.933,55 | MO4 R$ 480.120,76
+
 RECALC: 0 erros de fórmula nas 3 planilhas (18.581 / 11.688 / 15.551 fórmulas recalculadas em MO1/MO2/MO4)
 
 ENTREGA: planilhas copiadas para C:\Users\Thay_\Downloads\download claude cowork\entregas\
