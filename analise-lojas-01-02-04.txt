@@ -1,60 +1,154 @@
-ATUALIZAÇÃO BOLETOS MERCADINHO OLIVEIRA - 25/08/2026
-======================================================
+ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
+Lojas 01, 02 e 04 - atualizado em 27/08/2026
+Fonte: boletos moX.xls + VENDA ANUAL MOX.xls (extracao 27/08/2026 19:50)
+==============================================================================
 
-PERÍODO: Jun 2026 - Out 2026
-DATA DO CORTE: 01/06/2026 (nova janela de export cobre integralmente de 01/06 a 31/10, extração 25/08/2026 09:17)
-HISTÓRICO ANTERIOR: 0 linhas preservadas (export novo cobre desde o início, igual à atualização anterior)
+------------------------------------------------------------------------------
+LOJA MO1
+------------------------------------------------------------------------------
+Base: 2824 titulos | vencimentos de 01/06/2026 a 30/10/2026
 
-LOJA 01 (Multi-valor 1):
-  Total Geral (Jun-Out):       R$  4.275.156,88
-  Mercadorias P/Revenda:       R$  2.831.902,23  (66,2% do total)
-  Quantidade de lançamentos:   2.729
-  Classificações únicas:       70
-  Reconciliação:               OK BALANCEADA (Resumo Grupos = Resumo Mensal = Resumo Classificação, mês a mês)
-  Classificações novas s/ grupo: nenhuma
-  Comprado a Mais/a Menos (aba Resultado, Jun-Out): R$ -848.270,49 (comprou a menos que a sugestão no período)
+RECONCILIACAO (as 4 abas de resumo tem que bater)
+  Fluxo (entra no Resumo Diario) ....... R$ 4.413.998,40
+  Excluido do fluxo (lista editavel AE)  R$ 250.000,00
+  TOTAL GERAL .......................... R$ 4.663.998,40
+  Resumo Diario (fluxo + excluido) ..... R$ 4.663.998,40  OK
+  Resumo Classificacao (total) ......... R$ 4.413.998,40  OK
+  Mercadorias: Diario / Mensal / Grupos  R$ 2.938.029,28 / R$ 2.938.029,28 / R$ 2.938.029,28  OK
+  Classificacoes sem grupo (n/d) ....... R$ 0,00
 
-LOJA 02 (Multi-valor 2):
-  Total Geral (Jun-Out):       R$  1.235.166,28
-  Mercadorias P/Revenda:       R$    920.624,08  (74,5% do total)
-  Quantidade de lançamentos:   1.444
-  Classificações únicas:       49
-  Reconciliação:               OK BALANCEADA (Resumo Grupos = Resumo Mensal = Resumo Classificação, mês a mês)
-  Classificações novas s/ grupo: nenhuma
-  Comprado a Mais/a Menos (aba Resultado, Jun-Out): R$ -280.342,67 (comprou a menos que a sugestão no período)
+PESO DAS COMPRAS
+  Mercadorias p/ revenda ............... R$ 2.938.029,28 (66.6% do fluxo)
+  Outras despesas ...................... R$ 1.475.969,12
 
-LOJA 04 (Conveniência):
-  Total Geral (Jun-Out):       R$  1.793.174,24
-  Mercadorias P/Revenda:       R$  1.325.162,00  (73,9% do total)
-  Quantidade de lançamentos:   1.980
-  Classificações únicas:       48
-  Reconciliação:               OK BALANCEADA (Resumo Grupos = Resumo Mensal = Resumo Classificação, mês a mês)
-  Classificações novas s/ grupo: nenhuma
-  Comprado a Mais/a Menos (aba Resultado, Jun-Out): R$ -54.449,39 (comprou a menos que a sugestão no período)
+RESUMO MENSAL (mercadorias p/ revenda)
+  Jun/2026   R$ 844.287,21
+  Jul/2026   R$ 908.038,13
+  Ago/2026   R$ 820.208,46
+  Set/2026   R$ 336.247,59
+  Out/2026   R$ 29.247,89
 
-MAPA DE GRUPOS:
-  - Todos os grupos existentes foram preservados (coluna AC de Resumo Grupos intacta)
-  - Nenhuma classificação nova apareceu no export desta vez; linha "n/d / a revisar" ficou em R$ 0,00 em todos os meses, nas 3 lojas
-  - Exclusão de fluxo diário: PREVIA DOS EMPRESTIMOS (única, conforme configuração da Neila em Resumo Grupos!AE)
-  - Abas de resumo (Diário, Mensal, Classificação, Grupos) batem entre si em cada loja
+VENDA x COMPRA (aba Resultado) - percentual editavel E3 = 85.84%
+  Data de corte da venda: 27/08/2026 (mes corrente e PARCIAL)
+  Mes                 Venda       Sugerida       Comprado   A mais/menos
+  Jan/2026   R$ 1.144.889,69              -        R$ 0,00              -
+  Fev/2026   R$ 1.033.395,35  R$ 982.773,31        R$ 0,00              -
+  Mar/2026   R$ 1.144.493,82  R$ 887.066,57        R$ 0,00              -
+  Abr/2026   R$ 1.122.494,94  R$ 982.433,50        R$ 0,00              -
+  Mai/2026   R$ 1.211.481,58  R$ 963.549,66        R$ 0,00              -
+  Jun/2026   R$ 1.183.261,60 R$ 1.039.935,79  R$ 844.287,21 -R$ 195.648,58
+  Jul/2026   R$ 1.173.881,95 R$ 1.015.711,76  R$ 908.038,13 -R$ 107.673,63
+  Ago/2026    R$ 981.914,20 R$ 1.007.660,27  R$ 820.208,46 -R$ 187.451,81
+  Set/2026          R$ 0,00  R$ 842.875,15  R$ 336.247,59 -R$ 506.627,56
+  Out/2026          R$ 0,00        R$ 0,00   R$ 29.247,89   R$ 29.247,89
+  (valor positivo em 'A mais/menos' = comprou acima da sugestao;
+   negativo = comprou abaixo. Meses futuros ainda tem compra incompleta.)
 
-ABA RESULTADO (Venda x Compra):
-  - Estrutura preservada (não recriada), incluindo as colunas de Tendência, Dias de Estoque e Compra Ajustada adicionadas em 24/08/2026
-  - Valores de Compra Real atualizados automaticamente com os novos dados de Jun-Out
-  - Venda do Mes ainda não disponível para Set/Out/2026 na aba "Venda Anual (Base)" — normal, é atualizada separadamente quando a Neila fornecer o relatório de venda anual
+ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas
+  NF encontrada na entrada ............. 1653
+  NF nao encontrada .................... 401
+  Titulo sem numero de NF na observacao  770
 
-VENDA ANUAL (BASE) — atualizada com "VENDA ANUAL MOx.xls" (extração 25/08/2026, ~09:17):
-  - Data de corte movida de 20/08/2026 para 25/08/2026 nas 3 lojas
-  - Jan-Jul/2026: sem alteração (valores já batiam com o relatório novo)
-  - Ago/2026 (venda parcial, mês ainda em curso): MO1 R$ 718.621,75 -> R$ 900.646,78 | MO2 R$ 246.624,29 -> R$ 305.591,57 | MO4 R$ 313.843,89 -> R$ 387.194,16
-  - Expectativa de Venda do Mês Corrente (projeção Ago, recalculada): MO1 R$ 1.116.802,01 | MO2 R$ 378.933,55 | MO4 R$ 480.120,76
+------------------------------------------------------------------------------
+LOJA MO2
+------------------------------------------------------------------------------
+Base: 1509 titulos | vencimentos de 01/06/2026 a 26/10/2026
 
-ITEM RECEBIDO (NOTA FISCAL) — replicado da MO4 para MO1 e MO2 (25/08/2026):
-  - Aba nova "Mov Entradas (Rel 10497)" em cada arquivo, carregada de "Movimentacao Geral de Entradas MOx.xls" (extração 25/08/2026 ~09:18)
-  - Colunas AB/AC na aba Report: AC extrai o número da NF do texto da Observação (padrão "NF <numero>"); AB cruza esse número com a coluna Nota da aba Mov Entradas e traz o Produto, ou "nao encontrado" se o boleto foi pago mas a nota ainda não apareceu na movimentação de entrada
-  - MO4 também foi recalculada do zero (o merge anterior de hoje tinha desalinhado essas colunas com as linhas novas)
-  - Lançamentos com NF identificável / não encontrados na movimentação: MO1 1.696 / 306 | MO2 983 / 165 | MO4 1.247 / 289
+RECONCILIACAO (as 4 abas de resumo tem que bater)
+  Fluxo (entra no Resumo Diario) ....... R$ 1.299.731,13
+  Excluido do fluxo (lista editavel AE)  R$ 0,00
+  TOTAL GERAL .......................... R$ 1.299.731,13
+  Resumo Diario (fluxo + excluido) ..... R$ 1.299.731,13  OK
+  Resumo Classificacao (total) ......... R$ 1.299.731,13  OK
+  Mercadorias: Diario / Mensal / Grupos  R$ 974.628,58 / R$ 974.628,58 / R$ 974.628,58  OK
+  Classificacoes sem grupo (n/d) ....... R$ 0,00
 
-RECALC: 0 erros de fórmula nas 3 planilhas (20.277 / 12.671 / 15.598 fórmulas recalculadas em MO1/MO2/MO4)
+PESO DAS COMPRAS
+  Mercadorias p/ revenda ............... R$ 974.628,58 (75.0% do fluxo)
+  Outras despesas ...................... R$ 325.102,55
 
-ENTREGA: planilhas copiadas para C:\Users\Thay_\Downloads\download claude cowork\entregas\
+RESUMO MENSAL (mercadorias p/ revenda)
+  Jun/2026   R$ 277.892,68
+  Jul/2026   R$ 300.056,13
+  Ago/2026   R$ 278.166,01
+  Set/2026   R$ 117.875,01
+  Out/2026   R$ 638,75
+
+VENDA x COMPRA (aba Resultado) - percentual editavel E3 = 88.71%
+  Data de corte da venda: 27/08/2026 (mes corrente e PARCIAL)
+  Mes                 Venda       Sugerida       Comprado   A mais/menos
+  Jan/2026    R$ 306.569,53              -        R$ 0,00              -
+  Fev/2026    R$ 298.653,71  R$ 271.957,83        R$ 0,00              -
+  Mar/2026    R$ 344.581,20  R$ 264.935,71        R$ 0,00              -
+  Abr/2026    R$ 333.926,29  R$ 305.677,98        R$ 0,00              -
+  Mai/2026    R$ 363.676,33  R$ 296.226,01        R$ 0,00              -
+  Jun/2026    R$ 352.563,43  R$ 322.617,27  R$ 277.892,68  -R$ 44.724,59
+  Jul/2026    R$ 390.948,09  R$ 312.759,02  R$ 300.056,13  -R$ 12.702,89
+  Ago/2026    R$ 339.485,72  R$ 346.810,05  R$ 278.166,01  -R$ 68.644,04
+  Set/2026          R$ 0,00  R$ 301.157,78  R$ 117.875,01 -R$ 183.282,77
+  Out/2026          R$ 0,00        R$ 0,00      R$ 638,75      R$ 638,75
+  (valor positivo em 'A mais/menos' = comprou acima da sugestao;
+   negativo = comprou abaixo. Meses futuros ainda tem compra incompleta.)
+
+ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas
+  NF encontrada na entrada ............. 829
+  NF nao encontrada .................... 215
+  Titulo sem numero de NF na observacao  465
+
+------------------------------------------------------------------------------
+LOJA MO4
+------------------------------------------------------------------------------
+Base: 2035 titulos | vencimentos de 01/06/2026 a 25/10/2026
+
+RECONCILIACAO (as 4 abas de resumo tem que bater)
+  Fluxo (entra no Resumo Diario) ....... R$ 1.844.762,18
+  Excluido do fluxo (lista editavel AE)  R$ 475.000,00
+  TOTAL GERAL .......................... R$ 2.319.762,18
+  Resumo Diario (fluxo + excluido) ..... R$ 2.319.762,18  OK
+  Resumo Classificacao (total) ......... R$ 1.844.762,18  OK
+  Mercadorias: Diario / Mensal / Grupos  R$ 1.367.777,28 / R$ 1.367.777,28 / R$ 1.367.777,28  OK
+  Classificacoes sem grupo (n/d) ....... R$ 0,00
+
+PESO DAS COMPRAS
+  Mercadorias p/ revenda ............... R$ 1.367.777,28 (74.1% do fluxo)
+  Outras despesas ...................... R$ 476.984,90
+
+RESUMO MENSAL (mercadorias p/ revenda)
+  Jun/2026   R$ 434.138,40
+  Jul/2026   R$ 449.494,32
+  Ago/2026   R$ 362.653,06
+  Set/2026   R$ 115.350,81
+  Out/2026   R$ 6.140,69
+
+VENDA x COMPRA (aba Resultado) - percentual editavel E3 = 70.00%
+  Data de corte da venda: 27/08/2026 (mes corrente e PARCIAL)
+  Mes                 Venda       Sugerida       Comprado   A mais/menos
+  Jan/2026    R$ 537.222,65              -        R$ 0,00              -
+  Fev/2026    R$ 475.241,32  R$ 376.055,85        R$ 0,00              -
+  Mar/2026    R$ 548.119,47  R$ 332.668,92        R$ 0,00              -
+  Abr/2026    R$ 557.442,07  R$ 383.683,63        R$ 0,00              -
+  Mai/2026    R$ 569.583,19  R$ 390.209,45        R$ 0,00              -
+  Jun/2026    R$ 573.030,89  R$ 398.708,23  R$ 434.138,40   R$ 35.430,17
+  Jul/2026    R$ 514.415,44  R$ 401.121,62  R$ 449.494,32   R$ 48.372,70
+  Ago/2026    R$ 424.329,01  R$ 360.090,81  R$ 362.653,06    R$ 2.562,25
+  Set/2026          R$ 0,00  R$ 297.030,31  R$ 115.350,81 -R$ 181.679,50
+  Out/2026          R$ 0,00        R$ 0,00    R$ 6.140,69    R$ 6.140,69
+  (valor positivo em 'A mais/menos' = comprou acima da sugestao;
+   negativo = comprou abaixo. Meses futuros ainda tem compra incompleta.)
+
+ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas
+  NF encontrada na entrada ............. 969
+  NF nao encontrada .................... 327
+  Titulo sem numero de NF na observacao  739
+
+==============================================================================
+NOTAS DESTA EXECUCAO
+- Base substituida pela janela nova do export (01/06/2026 a 30/10/2026);
+  nao havia historico anterior a 01/06/2026 para preservar.
+- Classificacoes novas mapeadas automaticamente (coluna AC de Resumo Grupos,
+  editavel): MO1 EMBALAGENS = Despesa; MO4 COMBUSTIVEIS = Despesa e
+  MAQUINAS E EQUIPAMENTOS = Despesa (grupo herdado do que ja estava
+  definido nas outras lojas).
+- Extracao do numero da NF ampliada: agora tambem le 'NF123456' sem espaco
+  e NF citada no meio da observacao (ex. 'SOMAR C NF2474').
+- Recalculo LibreOffice: 0 erros nas 3 planilhas.
