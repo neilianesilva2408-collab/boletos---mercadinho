@@ -1,0 +1,38 @@
+ATUALIZAÇÃO LOJA MO4 - 28/08/2026
+
+BOLETOS (Contas a Pagar)
+=======================
+
+Período: Jun/2026 a Out/2026 (5 meses)
+Data de corte: 27/08/2026 19:50:50
+
+ESTRUTURA DE FLUXO:
+- Outras Despesas (não-Mercadorias): R$ 476,984.90
+- Mercadorias P/Revenda: R$ 1,367,777.28
+- TOTAL GERAL: R$ 1,844,762.18
+
+GRUPOS (resumo por tipo):
+- Despesa: calculado
+- Mercadoria: R$ 1,367,777.28  
+- Salários: calculado
+- Impostos: calculado
+- Empréstimo: calculado
+
+VENDA ANUAL (Base):
+- Data de corte atualizada: 27/08/2026
+- Agosto parcial: R$ 424,329.01
+- Expectativa de venda do mês corrente: recalculada
+
+RESULTADO (Venda x Compra):
+- Compra Real (Mercadorias): R$ 1,367,777.28
+- Comprado a Mais (Jun-Out): R$ -89,173.69 (comprou MENOS que sugerido)
+- Meses com Compra Sugerida: Jun, Jul, Ago
+- Setembro/Outubro: ainda sem sugestão (venda não fornecida na base ainda)
+
+NOTAS:
+- Classificações únicas: 50
+- Linhas de dados: 2035
+- Exclusões do fluxo diário: PREVIA DOS EMPRESTIMOS
+- Reconciliação: Diário + Mensal = Grupos TOTAL GERAL
+
+STATUS: ✓ Atualização realizada e sincronizada com GitHub
