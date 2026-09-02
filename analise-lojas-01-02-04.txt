@@ -1,35 +1,36 @@
 ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
-Lojas 01, 02 e 04 - atualizado em 01/09/2026
-Fonte: boletos moX.xls + VENDA ANUAL MOX.xls + Movimentacao Geral de Entradas MOX.xls
+Lojas 01, 02 e 04 - atualizado em 02/09/2026
+Fonte: boletos moX.xls (VENDA ANUAL e Movimentacao Geral de Entradas MO1/MO2 sem
+mudanca nesta rodada; Movimentacao Geral de Entradas MO4 atualizada)
 ==============================================================================
 
 ------------------------------------------------------------------------------
 LOJA MO1
 ------------------------------------------------------------------------------
-Base: 2900 titulos | vencimentos de 01/06/2026 a 21/10/2026 (janela do export cobre
-todo o historico existente; nao havia titulos anteriores a 01/06/2026 para preservar)
+Base: 2900 titulos | janela do export (01/06/2026 em diante) igual a ultima
+captura - nenhum historico anterior ao corte para preservar, atualizacao
+completa da mesma janela (correcoes/inclusoes do export mais novo)
 
-RECONCILIACAO (as 4 abas de resumo batem mes a mes)
+RECONCILIACAO (as 4 abas de resumo batem mes a mes, inclusive "n/d/a revisar" zerada)
   Fluxo (entra no Resumo Diario) ....... R$ 4.539.264,27
   Excluido do fluxo (lista editavel AE)  R$ 250.000,00  (PREVIA DOS EMPRESTIMOS)
   TOTAL GERAL (fluxo + excluido) ....... R$ 4.789.264,27
   Resumo Classificacao (total) ......... R$ 4.539.264,27  OK
   Mercadorias: Diario / Mensal / Grupos  R$ 3.050.269,97 / R$ 3.050.269,97 / R$ 3.050.269,97  OK
   Classificacoes sem grupo (n/d, todos os meses) ....... R$ 0,00
-  Recalculo LibreOffice: 0 erros (21.390 formulas)
+  Recalculo LibreOffice: 0 erros (21.394 formulas)
 
 PESO DAS COMPRAS
   Mercadorias p/ revenda ............... R$ 3.050.269,97 (67.2% do fluxo)
   Outras despesas ...................... R$ 1.488.994,30
 
-VENDA x COMPRA (aba Resultado) - percentual editavel E3 = 85.84%
-  Data de corte da venda: 01/09/2026 07:34:39 (mes corrente PARCIAL)
-  Ago/2026 fechou em R$ 1.170.486,36 (era R$ 981.914,20 parcial na ultima extracao)
-  Set/2026 iniciou com R$ 255,16 (parcial, primeiro dia do mes)
-  TOTAL Comprado a Mais/a Menos no periodo com dados comparaveis: -R$ 1.018.002,36
-    (negativo = comprou abaixo da sugestao no acumulado; mes a mes no arquivo)
+VENDA x COMPRA (aba Resultado): sem mudanca nesta rodada (Venda Anual nao foi
+atualizada - export identico ao ja presente no repo). Formulas conferidas e
+corretas (Compra Sugerida usa venda do mes anterior x $E$3 editavel; Comprado a
+Mais sempre na mesma linha).
 
-ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas (17.672 linhas)
+ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas (sem
+mudanca nesta rodada, MO1 nao teve novo bruto de Mov. Entradas)
   NF extraida da Observacao ............ 1808
   NF encontrada na Movimentacao ........ 1521
   NF nao encontrada (alerta) ........... 287
@@ -38,104 +39,79 @@ ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas (17.672 
 ------------------------------------------------------------------------------
 LOJA MO2
 ------------------------------------------------------------------------------
-Base: 1552 titulos | vencimentos de 01/06/2026 em diante (janela do export cobre
-todo o historico existente; nao havia titulos anteriores a 01/06/2026 para preservar)
+Base: 1558 titulos | janela do export (01/06/2026 em diante) igual a ultima
+captura - nenhum historico anterior ao corte para preservar, atualizacao
+completa da mesma janela
 
-RECONCILIACAO (as 4 abas de resumo batem mes a mes)
-  Fluxo (entra no Resumo Diario) ....... R$ 1.330.446,09
+RECONCILIACAO (as 4 abas de resumo batem mes a mes, inclusive "n/d/a revisar" zerada)
+  Fluxo (entra no Resumo Diario) ....... R$ 1.336.809,57
   Excluido do fluxo (lista editavel AE)  R$ 0,00
-  TOTAL GERAL .......................... R$ 1.330.446,09
-  Resumo Classificacao (total) ......... R$ 1.330.446,09  OK
-  Mercadorias: Diario / Mensal / Grupos  R$ 1.003.132,66 / R$ 1.003.132,66 / R$ 1.003.132,66  OK
+  TOTAL GERAL .......................... R$ 1.336.809,57
+  Resumo Classificacao (total) ......... R$ 1.336.809,57  OK
+  Mercadorias: Diario / Mensal / Grupos  R$ 1.004.165,94 / R$ 1.004.165,94 / R$ 1.004.165,94  OK
   Classificacoes sem grupo (n/d, todos os meses) ....... R$ 0,00
-  Recalculo LibreOffice: 0 erros (13.399 formulas)
+  Recalculo LibreOffice: 0 erros (13.429 formulas)
 
 PESO DAS COMPRAS
-  Mercadorias p/ revenda ............... R$ 1.003.132,66 (75.4% do fluxo)
-  Outras despesas ...................... R$ 327.313,43
+  Mercadorias p/ revenda ............... R$ 1.004.165,94 (75.1% do fluxo)
+  Outras despesas ...................... R$ 332.643,63
 
-VENDA x COMPRA (aba Resultado) - percentual editavel E3 = 88.71%
-  Data de corte da venda: 01/09/2026 07:36:20 (mes corrente PARCIAL)
-  Ago/2026 fechou em R$ 394.519,76 (era R$ 339.485,72 parcial na ultima extracao)
-  Set/2026 ainda sem venda lancada no relatorio de origem
-  TOTAL Comprado a Mais/a Menos no periodo com dados comparaveis: -R$ 329.032,16
+VENDA x COMPRA (aba Resultado): sem mudanca nesta rodada (Venda Anual nao foi
+atualizada). Formulas conferidas e corretas.
 
-ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas (7.605 linhas)
-  NF extraida da Observacao ............ 1064
+ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas (sem
+mudanca nesta rodada, MO2 nao teve novo bruto de Mov. Entradas)
+  NF extraida da Observacao ............ 1070
   NF encontrada na Movimentacao ........ 899
-  NF nao encontrada (alerta) ........... 165
+  NF nao encontrada (alerta) ........... 171
   Titulo sem numero de NF na observacao . 488
 
 ------------------------------------------------------------------------------
 LOJA MO4
 ------------------------------------------------------------------------------
-Base: 2086 titulos | vencimentos de 01/06/2026 em diante (janela do export cobre
-todo o historico existente; nao havia titulos anteriores a 01/06/2026 para preservar)
+Base: 2087 titulos | janela do export (01/06/2026 em diante) igual a ultima
+captura - nenhum historico anterior ao corte para preservar, atualizacao
+completa da mesma janela
 
-RECONCILIACAO (as 4 abas de resumo batem mes a mes)
-  Fluxo (entra no Resumo Diario) ....... R$ 1.877.327,75
-  Excluido do fluxo (lista editavel AE)  R$ 475.000,00 (PREVIA DOS EMPRESTIMOS -
-                                          adicionada a pedido da Neila em 01/09/2026,
-                                          igual MO1/MO2)
-  TOTAL GERAL (fluxo + excluido) ....... R$ 2.352.327,75
-  Resumo Classificacao (total) ......... R$ 1.877.327,75  OK
-  Mercadorias: Diario / Mensal / Grupos  R$ 1.397.638,15 / R$ 1.397.638,15 / R$ 1.397.638,15  OK
+RECONCILIACAO (as 4 abas de resumo batem mes a mes, inclusive "n/d/a revisar" zerada)
+  Fluxo (entra no Resumo Diario) ....... R$ 1.877.568,51
+  Excluido do fluxo (lista editavel AE)  R$ 475.000,00  (PREVIA DOS EMPRESTIMOS)
+  TOTAL GERAL (fluxo + excluido) ....... R$ 2.352.568,51
+  Resumo Classificacao (total) ......... R$ 1.877.568,51  OK
+  Mercadorias: Diario / Mensal / Grupos  R$ 1.397.878,91 / R$ 1.397.878,91 / R$ 1.397.878,91  OK
   Classificacoes sem grupo (n/d, todos os meses) ....... R$ 0,00
-  Recalculo LibreOffice: 0 erros (15.213 formulas)
+  Recalculo LibreOffice: 0 erros (15.224 formulas)
 
 PESO DAS COMPRAS
-  Mercadorias p/ revenda ............... R$ 1.397.638,15 (74.5% do fluxo)
+  Mercadorias p/ revenda ............... R$ 1.397.878,91 (74.5% do fluxo)
   Outras despesas ...................... R$ 479.689,60
 
-VENDA x COMPRA (aba Resultado) - percentual editavel E3 = 70.00%
-  Data de corte da venda: 01/09/2026 07:36:52 (mes corrente PARCIAL)
-  Ago/2026 fechou em R$ 502.976,89 (era R$ 424.329,01 parcial na ultima extracao)
-  Set/2026 iniciou com R$ 110,82 (parcial, primeiro dia do mes)
-  TOTAL Comprado a Mais/a Menos no periodo com dados comparaveis: -R$ 114.443,91
+VENDA x COMPRA (aba Resultado): sem mudanca nesta rodada (Venda Anual nao foi
+atualizada). Formulas conferidas e corretas.
 
-ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas (9.202 linhas)
-  NF extraida da Observacao ............ 1319
+ITEM RECEBIDO (Nota Fiscal) - "Mov Entradas (Rel 10497)" ATUALIZADA nesta rodada
+(bruto novo ate 01/09/2026, 9.202 linhas)
+  NF extraida da Observacao ............ 1320
   NF encontrada na Movimentacao ........ 1040
-  NF nao encontrada (alerta) ........... 279
+  NF nao encontrada (alerta) ........... 280
   Titulo sem numero de NF na observacao . 767
 
+ATENCAO - PENDENCIA ESTRUTURAL (nao corrigida nesta rodada, so identificada):
+A aba "Resumo Grupos" da MO4 cobre apenas Jan-Out/2026 (colunas B:K) e nao tem
+coluna "Total", diferente de MO1/MO2 (que cobrem Jan/2026-Dez/2027 + Total).
+Hoje nao ha nenhum boleto com vencimento depois de 25/10/2026, entao nada ficou
+de fora, mas assim que entrar um vencimento em novembro/2026 ele vai sumir
+silenciosamente do resumo por grupos da MO4. Precisa ser estendida numa proxima
+atualizacao.
+
 ==============================================================================
-CORRECOES ESTRUTURAIS NESTA EXECUCAO (MO4)
+RESUMO DA RODADA DE 02/09/2026
 
-A aba "Resumo Grupos" da MO4 estava usando uma formula antiga (SUMIFS com lista
-de classificacoes escritas na mao, uma corrente gigante por grupo/mes) em vez do
-padrao com coluna auxiliar (Report!Z) usado em MO1/MO2. Por causa disso, o MAPA
-classificacao->grupo (colunas AB/AC de Resumo Grupos) estava COMPLETAMENTE VAZIO
-na MO4 - a aba nunca dependia dele. Nesta execucao:
-  - O mapa da MO4 foi populado (49 classificacoes) reaproveitando o grupo ja
-    definido para a mesma classificacao em MO1/MO2.
-  - A matriz de Resumo Grupos da MO4 foi reconstruida no padrao correto
-    (coluna auxiliar + SOMASE), igual MO1/MO2, com deteccao dinamica dos grupos.
-  - A aba "Resumo Classificacao" da MO4 nao tinha linha TOTAL (foi adicionada) e
-    as celulas de valor estavam formatadas como DATA em vez de moeda (numero
-    correto por baixo, so a exibicao estava errada) - corrigido para R$.
-Todas as 3 lojas agora seguem a mesma arquitetura e reconciliam mes a mes.
+Arquivos novos encontrados em Downloads: boletos mo1.xls, boletos mo2.xls,
+boletos mo4.xls (as 3 lojas juntas) e Movimentacao Geral de Entradas - 10497 - 4
+(so a loja 04). VENDA ANUAL MO1/2/4.xls e Movimentacao Geral de Entradas MO1/MO2
+vieram identicos (hash) ao que ja estava no repositorio - nao foram reprocessados.
 
-ATUALIZACAO 01/09/2026 (pedido da Neila): "PREVIA DOS EMPRESTIMOS" (R$ 475.000,00,
-grupo Emprestimo) foi adicionada a lista de exclusao do fluxo diario (Resumo
-Grupos!AE) da MO4, igual ja acontecia em MO1/MO2. Ao remover a linha dela da aba
-Resumo Classificacao, um bug do openpyxl (delete_rows nao atualiza o texto de
-formulas nas linhas abaixo do ponto apagado) descolou por um passo as formulas
-das 12 classificacoes seguintes (PROPAGANDA PUBLICIDADE ate VALE TRANSPORTE) -
-cada uma estava somando o valor da classificacao ERRADA (a de baixo). Foi
-detectado na conferencia de reconciliacao (Classificacao batendo o dobro do
-esperado) e corrigido reescrevendo as formulas dessas 12 linhas. Reconciliado
-de novo com recalculo limpo antes de liberar.
+Nenhuma classificacao nova ficou sem grupo mapeado em nenhuma das 3 lojas.
 
-CLASSIFICACOES SEM GRUPO EM NENHUMA DAS 3 LOJAS (defaultei para "Despesa",
-coluna AC de Resumo Grupos e editavel - revisar se necessario):
-  - HORA EXTRA (nova na MO2)
-  - TAXA ADM CARTOES
-  - TELEFONE A PAGAR
-
-NOTAS GERAIS
-- Nenhuma loja tinha titulos anteriores a 01/06/2026 no arquivo de analise, entao
-  a janela do export novo (que tambem comeca em 01/06/2026) substituiu a base
-  inteira sem perda de historico.
-- Recalculo LibreOffice: 0 erros nas 3 planilhas (todas rodadas apos os ajustes
-  estruturais da MO4 acima).
+Recalculo LibreOffice: 0 erros nas 3 planilhas.
