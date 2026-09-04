@@ -1,15 +1,16 @@
 ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
-Lojas 01, 02 e 04 - atualizado em 02/09/2026
-Fonte: boletos moX.xls (VENDA ANUAL e Movimentacao Geral de Entradas MO1/MO2 sem
-mudanca nesta rodada; Movimentacao Geral de Entradas MO4 atualizada)
+Lojas 01, 02 e 04 - atualizado em 04/09/2026
+Fonte: boletos moX.xls sem mudanca nesta rodada (hash identico ao repo).
+VENDA ANUAL MO1/MO2.xls e Movimentacao Geral de Entradas MO1/MO2.xls
+atualizadas nesta rodada (export novo de 03/09/2026). MO4 sem novo bruto.
 ==============================================================================
 
 ------------------------------------------------------------------------------
 LOJA MO1
 ------------------------------------------------------------------------------
-Base: 2900 titulos | janela do export (01/06/2026 em diante) igual a ultima
-captura - nenhum historico anterior ao corte para preservar, atualizacao
-completa da mesma janela (correcoes/inclusoes do export mais novo)
+Base: 2900 titulos (sem mudanca - boletos mo1.xls identico ao ja presente no
+repo). Mov Entradas (Rel 10497) e Venda Anual atualizadas: bruto novo cobre
+01/06/2026 a 03/09/2026.
 
 RECONCILIACAO (as 4 abas de resumo batem mes a mes, inclusive "n/d/a revisar" zerada)
   Fluxo (entra no Resumo Diario) ....... R$ 4.539.264,27
@@ -18,30 +19,40 @@ RECONCILIACAO (as 4 abas de resumo batem mes a mes, inclusive "n/d/a revisar" ze
   Resumo Classificacao (total) ......... R$ 4.539.264,27  OK
   Mercadorias: Diario / Mensal / Grupos  R$ 3.050.269,97 / R$ 3.050.269,97 / R$ 3.050.269,97  OK
   Classificacoes sem grupo (n/d, todos os meses) ....... R$ 0,00
-  Recalculo LibreOffice: 0 erros (21.394 formulas)
+  Recalculo LibreOffice: 0 erros (21.406 formulas)
 
 PESO DAS COMPRAS
   Mercadorias p/ revenda ............... R$ 3.050.269,97 (67.2% do fluxo)
   Outras despesas ...................... R$ 1.488.994,30
 
-VENDA x COMPRA (aba Resultado): sem mudanca nesta rodada (Venda Anual nao foi
-atualizada - export identico ao ja presente no repo). Formulas conferidas e
-corretas (Compra Sugerida usa venda do mes anterior x $E$3 editavel; Comprado a
-Mais sempre na mesma linha).
+VENDA x COMPRA (aba Resultado) - Venda Anual (Base) ATUALIZADA nesta rodada:
+  Data de corte de venda: 01/09/2026 07:34 -> 03/09/2026 08:57
+  Venda Set/2026 (parcial, ate a data de corte): R$ 255,16 -> R$ 75.138,89
+  Comprado a Mais/a Menos TOTAL (meses com comparavel) . R$ -1.082.282,56
+    (negativo = comprou menos que a sugestao nesses meses)
+  Formulas conferidas: Compra Sugerida usa venda do mes anterior x $E$3
+  editavel; Comprado a Mais sempre na mesma linha.
+  ATENCAO: a formula "Expectativa de Venda do Mes Corrente" (aba Venda Anual
+  (Base), celula C19) esta referenciando a venda de Agosto (C12) em vez do mes
+  corrente Setembro (C13) - bug de uma rodada anterior, nao corrigido aqui por
+  estar fora do escopo pedido ("nao precisa reescrever"). Hoje isso projeta
+  R$ 12.095.025,72 de venda anual, um numero inflado porque usa o mes cheio de
+  agosto dividido pelos poucos dias corridos de setembro. Recomendo a Neila
+  pedir a correcao (trocar C12 por C13 na formula) numa proxima rodada.
 
-ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas (sem
-mudanca nesta rodada, MO1 nao teve novo bruto de Mov. Entradas)
+ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas
+(Mov Entradas ATUALIZADA nesta rodada, bruto novo ate 03/09/2026, 18.075 linhas)
   NF extraida da Observacao ............ 1808
-  NF encontrada na Movimentacao ........ 1521
-  NF nao encontrada (alerta) ........... 287
+  NF encontrada na Movimentacao ........ 1524
+  NF nao encontrada (alerta) ........... 284
   Titulo sem numero de NF na observacao . 1092
 
 ------------------------------------------------------------------------------
 LOJA MO2
 ------------------------------------------------------------------------------
-Base: 1558 titulos | janela do export (01/06/2026 em diante) igual a ultima
-captura - nenhum historico anterior ao corte para preservar, atualizacao
-completa da mesma janela
+Base: 1558 titulos (sem mudanca - boletos mo2.xls identico ao ja presente no
+repo). Mov Entradas (Rel 10497) e Venda Anual atualizadas: bruto novo cobre
+01/06/2026 a 03/09/2026.
 
 RECONCILIACAO (as 4 abas de resumo batem mes a mes, inclusive "n/d/a revisar" zerada)
   Fluxo (entra no Resumo Diario) ....... R$ 1.336.809,57
@@ -50,68 +61,95 @@ RECONCILIACAO (as 4 abas de resumo batem mes a mes, inclusive "n/d/a revisar" ze
   Resumo Classificacao (total) ......... R$ 1.336.809,57  OK
   Mercadorias: Diario / Mensal / Grupos  R$ 1.004.165,94 / R$ 1.004.165,94 / R$ 1.004.165,94  OK
   Classificacoes sem grupo (n/d, todos os meses) ....... R$ 0,00
-  Recalculo LibreOffice: 0 erros (13.429 formulas)
+  Recalculo LibreOffice: 0 erros (13.441 formulas)
 
 PESO DAS COMPRAS
   Mercadorias p/ revenda ............... R$ 1.004.165,94 (75.1% do fluxo)
   Outras despesas ...................... R$ 332.643,63
 
-VENDA x COMPRA (aba Resultado): sem mudanca nesta rodada (Venda Anual nao foi
-atualizada). Formulas conferidas e corretas.
+VENDA x COMPRA (aba Resultado) - Venda Anual (Base) ATUALIZADA nesta rodada:
+  Data de corte de venda: 01/09/2026 07:36 -> 03/09/2026 09:00
+  Venda Set/2026 (parcial, ate a data de corte): R$ 0,00 -> R$ 30.484,21
+  Comprado a Mais/a Menos TOTAL (meses com comparavel) . R$ -355.041,42
+  Formulas conferidas e corretas. Mesmo alerta da MO1 se aplica aqui: a
+  "Expectativa de Venda do Mes Corrente" (C19) referencia Agosto (C12) em vez
+  de Setembro (C13) - nao corrigido nesta rodada.
 
-ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas (sem
-mudanca nesta rodada, MO2 nao teve novo bruto de Mov. Entradas)
+ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas
+(Mov Entradas ATUALIZADA nesta rodada, bruto novo ate 03/09/2026, 7.708 linhas)
   NF extraida da Observacao ............ 1070
-  NF encontrada na Movimentacao ........ 899
-  NF nao encontrada (alerta) ........... 171
+  NF encontrada na Movimentacao ........ 905
+  NF nao encontrada (alerta) ........... 165
   Titulo sem numero de NF na observacao . 488
 
 ------------------------------------------------------------------------------
 LOJA MO4
 ------------------------------------------------------------------------------
-Base: 2087 titulos | janela do export (01/06/2026 em diante) igual a ultima
-captura - nenhum historico anterior ao corte para preservar, atualizacao
-completa da mesma janela
+Base: 3373 titulos. Nenhum arquivo novo (boletos mo4.xls, VENDA ANUAL MO4.xls
+e Movimentacao Geral de Entradas MO4.xls identicos, por hash, ao que ja estava
+no repositorio) - nao reprocessada nesta rodada, numeros abaixo refletem o
+estado ja existente.
 
 RECONCILIACAO (as 4 abas de resumo batem mes a mes, inclusive "n/d/a revisar" zerada)
-  Fluxo (entra no Resumo Diario) ....... R$ 1.877.568,51
+  Fluxo (entra no Resumo Diario) ....... R$ 1.995.587,55
   Excluido do fluxo (lista editavel AE)  R$ 475.000,00  (PREVIA DOS EMPRESTIMOS)
-  TOTAL GERAL (fluxo + excluido) ....... R$ 2.352.568,51
-  Resumo Classificacao (total) ......... R$ 1.877.568,51  OK
-  Mercadorias: Diario / Mensal / Grupos  R$ 1.397.878,91 / R$ 1.397.878,91 / R$ 1.397.878,91  OK
+  TOTAL GERAL (fluxo + excluido) ....... R$ 2.470.587,55
+  Resumo Classificacao (total) ......... R$ 1.995.587,55  OK
+  Mercadorias: Diario / Mensal / Grupos  R$ 1.417.486,47 / R$ 1.417.486,47 / R$ 1.417.486,47  OK
   Classificacoes sem grupo (n/d, todos os meses) ....... R$ 0,00
-  Recalculo LibreOffice: 0 erros (15.224 formulas)
 
 PESO DAS COMPRAS
-  Mercadorias p/ revenda ............... R$ 1.397.878,91 (74.5% do fluxo)
-  Outras despesas ...................... R$ 479.689,60
+  Mercadorias p/ revenda ............... R$ 1.417.486,47 (71.0% do fluxo)
+  Outras despesas ...................... R$ 578.101,08
 
-VENDA x COMPRA (aba Resultado): sem mudanca nesta rodada (Venda Anual nao foi
-atualizada). Formulas conferidas e corretas.
+VENDA x COMPRA (aba Resultado): sem mudanca nesta rodada (Venda Anual nao
+recebeu bruto novo).
+  Comprado a Mais/a Menos TOTAL (meses com comparavel) . R$ -116.882,47
 
-ITEM RECEBIDO (Nota Fiscal) - "Mov Entradas (Rel 10497)" ATUALIZADA nesta rodada
-(bruto novo ate 01/09/2026, 9.202 linhas)
-  NF extraida da Observacao ............ 1320
-  NF encontrada na Movimentacao ........ 1040
-  NF nao encontrada (alerta) ........... 280
-  Titulo sem numero de NF na observacao . 767
+ITEM RECEBIDO (Nota Fiscal): sem mudanca nesta rodada (Mov Entradas nao
+recebeu bruto novo).
+  NF extraida da Observacao ............ 1335
+  NF encontrada na Movimentacao ........ 1061
+  NF nao encontrada (alerta) ........... 274
+  Titulo sem numero de NF na observacao . 2038
 
-ATENCAO - PENDENCIA ESTRUTURAL (nao corrigida nesta rodada, so identificada):
+ATENCAO - PENDENCIA ESTRUTURAL (carregada de rodadas anteriores, ainda nao
+corrigida - fora do escopo desta rodada porque MO4 nao teve arquivo novo):
 A aba "Resumo Grupos" da MO4 cobre apenas Jan-Out/2026 (colunas B:K) e nao tem
 coluna "Total", diferente de MO1/MO2 (que cobrem Jan/2026-Dez/2027 + Total).
-Hoje nao ha nenhum boleto com vencimento depois de 25/10/2026, entao nada ficou
-de fora, mas assim que entrar um vencimento em novembro/2026 ele vai sumir
-silenciosamente do resumo por grupos da MO4. Precisa ser estendida numa proxima
-atualizacao.
+O maior vencimento hoje na base MO4 ainda e 25/10/2026, entao nada ficou de
+fora ate agora, mas assim que entrar um vencimento em novembro/2026 ele vai
+sumir silenciosamente do resumo por grupos da MO4. Precisa ser estendida numa
+proxima atualizacao que mexa na MO4.
 
 ==============================================================================
-RESUMO DA RODADA DE 02/09/2026
+RESUMO DA RODADA DE 04/09/2026
 
-Arquivos novos encontrados em Downloads: boletos mo1.xls, boletos mo2.xls,
-boletos mo4.xls (as 3 lojas juntas) e Movimentacao Geral de Entradas - 10497 - 4
-(so a loja 04). VENDA ANUAL MO1/2/4.xls e Movimentacao Geral de Entradas MO1/MO2
-vieram identicos (hash) ao que ja estava no repositorio - nao foram reprocessados.
+Arquivos novos encontrados em Downloads (pasta "download claude cowork"):
+VENDA ANUAL MO1.xls, VENDA ANUAL MO2.xls, Movimentacao Geral de Entradas
+- 10497 - 1.xls, - 2.xls (todos com timestamp de extracao 03/09/2026).
+boletos mo1.xls, boletos mo2.xls, boletos mo4.xls, VENDA ANUAL MO4.xls e
+Movimentacao Geral de Entradas - 10497 - 4.xls vieram identicos (hash) ao que
+ja estava no repositorio - nao foram reprocessados.
+
+Como so MO1 e MO2 tiveram arquivo novo, so essas duas lojas foram atualizadas
+nesta rodada (regra: nunca atualizar uma loja isolada, a menos que so ela
+tenha arquivo novo - aqui foram duas das tres, MO4 ficou de fora por nao ter
+nada novo).
 
 Nenhuma classificacao nova ficou sem grupo mapeado em nenhuma das 3 lojas.
 
-Recalculo LibreOffice: 0 erros nas 3 planilhas.
+Recalculo LibreOffice: 0 erros em MO1 (21.406 formulas) e MO2 (13.441
+formulas) apos a atualizacao.
+
+Pendencias para a Neila revisar:
+1. Formula "Expectativa de Venda do Mes Corrente" em MO1 e MO2 (aba Venda
+   Anual (Base), celula C19) esta usando o mes de Agosto (C12) fixo em vez do
+   mes corrente dinamico - projeta um numero inflado enquanto o mes corrente
+   estiver com poucos dias de venda lancada. Precisa de correcao pontual.
+2. Resumo Grupos da MO4 precisa ser estendido (ver pendencia estrutural acima)
+   antes que um vencimento de novembro/2026 apareca na base.
+
+Entregas copiadas para a pasta de entregas (Downloads\download claude
+cowork\entregas): boletos mo1 - analise.xlsx e boletos mo2 - analise.xlsx
+(MO4 nao foi copiada por nao ter mudado nesta rodada).
