@@ -221,3 +221,32 @@ entregas nao ficar com MO1/MO4 na frente da MO2 sem a Neila ter validado.
 
 Regra ja documentada na skill boletos-mercadinho para quando a Neila
 confirmar e pedir pra replicar pra MO1/MO4.
+
+==============================================================================
+RODADA MO2 SOB DEMANDA (14/09/2026, ~10:55-11:00, "rode a loja 2")
+
+A Neila pediu pra rodar a MO2 de novo depois de validar a mudanca de Notas
+que Chegaram. Verificacao na pasta RELATORIOS CISS:
+  - 10491 (Contas a Pagar) e 10497 (Movimentacao Geral de Entradas): sem
+    novo bruto desde a rodada anterior (mesmo tamanho de arquivo).
+  - 10502 (Resumo Notas Fiscais Compras): novo bruto (extracao 09:22), mas
+    dados IDENTICOS ao ja processado (930 notas, mesma distribuicao de
+    operacao, mesmo total MERCADORIA R$ 690.072,21) - nao mudou nada na
+    aba Notas Fiscais (Rel 19) nem em Notas que Chegaram/Bonificacao.
+  - 10352 (Venda Anual por Secao): novo bruto (extracao 14/09 10:20:45,
+    era 11/09 08:17:16) - Set/2026 (mes corrente, venda parcial) subiu de
+    R$ 129.788,92 para R$ 165.932,20. Jan-Ago sem alteracao. Atualizado na
+    aba "Venda Anual (Base)" (valor + data de corte).
+
+Impacto na aba Resultado (Set/2026): Venda do Mes R$ 165.932,20 (era
+R$ 129.788,92), Expectativa de Venda do Mes Corrente R$ 355.569,00 (era
+R$ 353.969,78), Resultado (Venda-Compra-DespGeral) R$ -127.043,23 (era
+R$ -163.186,51). Comprado a Mais/Menos TOTAL (periodo) R$ -62.001,69 (era
+R$ -36.701,39 - mudou porque a Compra Sugerida de Out/2026 usa a venda de
+Set como base (R$ 116.152,54, era R$ 90.658,84) e ja existem alguns
+boletos de Out lancados na base (Compra Real R$ 6.927,31), entao a
+diferenca daquele mes ficou mais negativa: R$ -109.225,23 (era
+R$ -83.924,93, com a Compra Sugerida antiga de R$ 90.852,24)).
+
+Recalculo LibreOffice: 0 erros (15.776 formulas). Entregas: "boletos mo2 -
+analise.xlsx" recopiada com essa atualizacao.
