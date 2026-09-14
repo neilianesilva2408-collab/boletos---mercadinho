@@ -176,3 +176,41 @@ desta tarefa agendada pode ser atualizada para apontar direto pra
 Entregas copiadas para a pasta de entregas (Downloads\download claude
 cowork\entregas): boletos mo1 - analise.xlsx, boletos mo2 - analise.xlsx e
 boletos mo4 - analise.xlsx (as 3, ja que as 3 mudaram nesta rodada).
+
+==============================================================================
+ATUALIZACAO NA MESMA RODADA (14/09/2026, apos feedback da Neila)
+
+1) Relatorio 10502 (Notas Fiscais de Compras / "Rel 19") estava desatualizado
+   na aba "Notas Fiscais (Rel 19)" das 3 lojas - a rodada original desta
+   tarefa nao atualiza esse relatorio, so o 10491 e o 10497. Atualizado agora
+   com o bruto de hoje (extracao 14/09/2026 09:21) nas 3 lojas.
+
+2) Regra nova da Neila para "Notas que Chegaram" (coluna J da aba Resultado):
+   considerar APENAS operacoes "COMPRA DE MERCADORIA - SEM FINANCEIRO"
+   (codigo 11) e "COMPRA DE PRODUTOR RURAL" (codigos 2 e 6) - excluindo
+   "COMPRA DE MERCADORIA" com financeiro (codigo 1, que ja vira boleto/
+   contas a pagar e seria contado de novo) e qualquer outra operacao
+   (uso/consumo, embalagens, manutencao, imobilizado etc). Implementado via
+   coluna auxiliar "Tipo (aux)" (col L) na aba Notas Fiscais (Rel 19) e
+   SUMIFS filtrado por ela. Cabecalho da coluna J atualizado para deixar
+   claro o criterio.
+
+   O relatorio 10502 nao traz nenhuma bonificacao (codigos 171/172) - essas
+   so aparecem no relatorio 10497 (Movimentacao Geral de Entradas), entao
+   nao ha risco de contar bonificacao duas vezes dentro do proprio Rel 19.
+
+3) Bonificacao sinalizada a parte, SEM entrar no numero principal: nova
+   coluna N na aba Resultado ("Bonificacao Recebida (Rel 10497)"), somando
+   Mov Entradas (Rel 10497) filtrado por Op 171/172 (coluna auxiliar
+   "Bonificacao (aux)", col P, adicionada nessa aba), mes a mes.
+
+Totais por loja (Jun-Set/2026, unico periodo com dado ate agora):
+  MO1: Notas que Chegaram R$ 2.004.035,95 | Bonificacao Recebida R$ 13.538,73
+  MO2: Notas que Chegaram R$   690.072,21 | Bonificacao Recebida R$  2.031,91
+  MO4: Notas que Chegaram R$ 1.244.561,77 | Bonificacao Recebida R$  5.868,11
+
+Recalculo LibreOffice apos essas mudancas: 0 erros nas 3 lojas (MO1 26.185,
+MO2 15.776, MO4 21.018 formulas).
+
+Entregas re-copiadas para a pasta de entregas com essa correcao (as 3
+planilhas, mesmos nomes acima).
