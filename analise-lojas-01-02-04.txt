@@ -1,4 +1,107 @@
 ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
+Lojas 01, 02 e 04 - atualizado em 17/09/2026 (2a rodada do dia, ~09:10)
+
+O QUE MUDOU NESTA RODADA: BOLETOS NOVOS NAS 3 LOJAS.
+A rodada das 08:24 de hoje deixou passar o relatorio 10491 - CONTAS A PAGAR
+(= "boletos moX.xls") extraido em 16/09/2026 22:17-22:20 na pasta
+"Downloads\download claude cowork\RELATORIOS CISS" (hash diferente do
+"boletos moX.xls" que estava no repo, de 14-15/09). Nesta rodada ele foi
+copiado para o repo como "boletos mo1/mo2/mo4.xls" e mesclado na aba Report.
+VENDA ANUAL (10352) e Movimentacao Geral de Entradas (10497): mesmo hash do
+que ja estava no repo (processados as 08:24) - nao mexidos.
+Venda Anual (Base), Notas Fiscais (Rel 19) e Mov Entradas: sem alteracao.
+
+Merge da aba Report (regra da janela): export cobre 01/06/2026 a 31/12/2026;
+data de corte = 01/06/2026; linhas de historico anteriores ao corte mantidas
+= 0 nas 3 lojas (a base tambem comecava em 01/06/2026). Colunas auxiliares
+Z (grupo), AA (entra no fluxo), AB (item recebido) e AC (NF extraida)
+recalculadas para TODAS as linhas no mesmo passo (conferido: 0 linhas com
+AC desalinhado da Observacao). Mercadorias Revenda reconstruida.
+==============================================================================
+
+------------------------------------------------------------------------------
+LOJA MO1
+------------------------------------------------------------------------------
+Base (Report): 4.467 titulos (era 4.213). 81 classificacoes (nenhuma nova).
+  Fluxo (entra no Resumo Diario) ....... R$ 5.445.163,11  (era R$ 5.202.166,30)
+    Outras Despesas ..................... R$ 1.886.511,78
+    Mercadorias P/Revenda ................ R$ 3.558.651,33  (era R$ 3.405.062,35)
+  Excluido do fluxo (lista AE) ......... R$   250.000,00  (PREVIA DOS EMPRESTIMOS)
+  TOTAL GERAL COMPLETO ................. R$ 5.695.163,11
+  Mudanca por mes (fluxo): Ago +R$ 7.816,00 (lancamentos novos em mes fechado);
+    Set R$ 1.004.015,49 -> R$ 1.182.497,70; Out R$ 168.761,09 -> R$ 225.459,69.
+RECONCILIACAO mes a mes (Jan/2026-Dez/2027): TOTAL GERAL = Resumo Grupos =
+  Resumo Classificacao = Resumo Mensal = Resumo Diario: OK. n/d / a revisar: R$ 0,00.
+  Diario: fluxo + excluido = soma da base: OK. Recalculo: 0 erros (26.871 formulas).
+Item recebido (Nota Fiscal): 2.222 lancamentos com NF identificada;
+  1.925 encontrados na Mov Entradas; 297 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 85,84%) - formulas B/C/D/E e TOTAL conferidas OK:
+  Compra Real total ............. R$ 3.558.651,33
+  Comprado a Mais/a Menos TOTAL . R$ -989.355,59 (era R$ -1.142.944,57)
+  Set/2026: compra real R$ 776.946,07 x sugerida R$ 1.004.745,49 = R$ -227.799,42
+  Venda Anual: sem bruto novo (data de corte segue 15/09/2026 07:50:29);
+  Expectativa de venda Set/2026 R$ 1.118.251,66.
+  Notas que Chegaram (Rel 19) total R$ 3.213.338,74; Bonificacao R$ 13.685,96.
+
+------------------------------------------------------------------------------
+LOJA MO2
+------------------------------------------------------------------------------
+Base (Report): 2.195 titulos (era 2.157). 52 classificacoes (nenhuma nova).
+  Fluxo (entra no Resumo Diario) ....... R$ 1.698.791,13  (era R$ 1.675.373,44)
+    Outras Despesas ..................... R$   550.618,27
+    Mercadorias P/Revenda ................ R$ 1.148.172,86  (era R$ 1.131.952,77)
+  Excluido do fluxo (lista AE) ......... R$         0,00
+  TOTAL GERAL COMPLETO ................. R$ 1.698.791,13
+  Mudanca por mes (fluxo): Set R$ 313.777,74 -> R$ 336.466,12;
+    Out R$ 42.169,04 -> R$ 42.898,35. Jun-Ago sem alteracao.
+RECONCILIACAO mes a mes: OK. n/d / a revisar: R$ 0,00.
+  Recalculo: 0 erros (15.755 formulas).
+Item recebido (Nota Fiscal): 1.216 lancamentos com NF identificada;
+  1.035 encontrados; 181 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 70%) - formulas conferidas OK:
+  Compra Real total ............. R$ 1.148.172,86
+  Comprado a Mais/a Menos TOTAL . R$ -26.476,56 (era R$ -42.696,65)
+  Set/2026: compra real R$ 262.147,34 x sugerida R$ 276.163,83 = R$ -14.016,49
+  Venda Anual: sem bruto novo (corte 15/09/2026 07:51:40);
+  Expectativa de venda Set/2026 R$ 352.725,98.
+  Notas que Chegaram total R$ 1.033.543,75; Bonificacao R$ 2.144,17.
+
+------------------------------------------------------------------------------
+LOJA MO4
+------------------------------------------------------------------------------
+Base (Report): 3.810 titulos (era 3.719). 58 classificacoes (1 nova).
+  Fluxo (entra no Resumo Diario) ....... R$ 2.292.204,39  (era R$ 2.245.052,21)
+    Outras Despesas ..................... R$   719.865,46
+    Mercadorias P/Revenda ................ R$ 1.572.338,93  (era R$ 1.532.934,07)
+  Excluido do fluxo (lista AE) ......... R$   725.000,00  (PREVIA DOS EMPRESTIMOS)
+  TOTAL GERAL COMPLETO ................. R$ 3.017.204,39
+  Mudanca por mes (fluxo): Set R$ 373.198,92 -> R$ 407.428,48;
+    Out R$ 70.461,01 -> R$ 83.383,63. Jun-Ago sem alteracao.
+CLASSIFICACAO NOVA: "JUROS S/ FINANCIAMENTOS" (R$ 3.569,92, Set/2026) - nao
+  existia no mapa de nenhuma das 3 lojas. ATRIBUIDA ao grupo "Emprestimo"
+  (mesma natureza de "JUROS S/ EMPRESTIMOS"), em Resumo Grupos!AB65/AC65.
+  Linha nova incluida em Resumo Classificacao. Se a Neila preferir outro
+  grupo, e so editar a celula AC65.
+RECONCILIACAO mes a mes: OK. n/d / a revisar: R$ 0,00.
+  Recalculo: 0 erros (21.021 formulas).
+Item recebido (Nota Fiscal): 1.476 lancamentos com NF identificada;
+  1.198 encontrados; 278 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 70%) - formulas conferidas OK:
+  Compra Real total ............. R$ 1.572.338,93
+  Comprado a Mais/a Menos TOTAL . R$ -103.244,87 (era R$ -142.649,73)
+  Set/2026: compra real R$ 290.821,02 x sugerida R$ 352.083,82 = R$ -61.262,80
+  Venda Anual: sem bruto novo (corte 15/09/2026 07:52:35);
+  Expectativa de venda Set/2026 R$ 467.369,46.
+  Notas que Chegaram total R$ 1.379.057,82; Bonificacao R$ 5.868,11.
+
+Obs.: "Set/2026" e "Out/2026" ainda sao meses em aberto - os valores de compra
+real crescem a cada export de contas a pagar.
+
+##############################################################################
+RODADA ANTERIOR (17/09/2026 08:24) - mantida abaixo como historico
+##############################################################################
+
+ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
 Lojas 01, 02 e 04 - atualizado em 17/09/2026
 
 IMPORTANTE: NESTA RODADA NAO HOUVE BOLETOS NOVOS. A base "Report" (contas a
