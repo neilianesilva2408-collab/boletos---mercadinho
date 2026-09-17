@@ -1,26 +1,41 @@
 ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
-Lojas 01, 02 e 04 - atualizado em 14/09/2026 (rodada automatica agendada)
-Fonte: pasta "Downloads\download claude cowork\RELATORIOS CISS" (skill
-automatica "relatorios-ciss", 10491-CONTAS A PAGAR = "boletos moX.xls",
-10497-MOVIMENTACAO GERAL DE ENTRADAS). Como nas rodadas anteriores desde
-08/09/2026, a pasta raiz "Downloads\download claude cowork" nao tinha os
-arquivos soltos "boletos moX.xls"/"VENDA ANUAL MOx.xls"/"Movimentacao Geral
-de Entradas...xls" que a tarefa originalmente esperava ali - so existem na
-subpasta "RELATORIOS CISS", com nomenclatura por codigo de relatorio. Esta
-rodada usou os brutos frescos de hoje dessa subpasta (extracao ~09:08-09:11
-de 14/09/2026), copiando-os para o repositorio com o nome que a planilha de
-analise espera. A VENDA ANUAL (10352) NAO mudou nesta rodada (mesmo arquivo
-de 11/09/2026) - a aba "Venda Anual (Base)" ficou como estava.
+Lojas 01, 02 e 04 - atualizado em 17/09/2026
+
+IMPORTANTE: NESTA RODADA NAO HOUVE BOLETOS NOVOS. A base "Report" (contas a
+pagar / boletos) e as abas derivadas dela - Mercadorias Revenda, Resumo
+Diario, Resumo Mensal, Resumo Classificacao, Resumo Grupos - ficaram
+INALTERADAS nas 3 lojas (mesmo hash dos arquivos "boletos moX - analise.xlsx"
+ja entregues antes; nao havia "boletos moX.xls" novo nem VENDA/Movimentacao
+com os nomes antigos soltos na raiz de Downloads). O que mudou, na pasta
+"Downloads\download claude cowork\RELATORIOS CISS":
+  - VENDA ANUAL (10352): bruto novo para MO1 e MO4 (extracao 15/09/2026).
+    MO2 NAO mudou (hash identico ao ja processado) - nao mexida aqui.
+  - Movimentacao Geral de Entradas (10497): bruto novo para as 3 lojas
+    (extracao 16/09/2026 22:27-22:33, variante sem "DE").
+  - Resumo Notas Fiscais de Compras (10502): bruto novo para as 3 lojas
+    (extracao 16/09/2026 22:12-22:16); a aba "Notas Fiscais (Rel 19)" nao
+    vinha sendo atualizada com esse relatorio ha algumas rodadas (a copia
+    antiga "19 X.xlsx" na pasta de Downloads estava datada de 08/09).
+Como a Movimentacao de Entradas e as Notas Fiscais mudaram, e a Neila pediu
+nesta rodada para padronizar o criterio de "Notas que Chegaram" e a
+sinalizacao de "Bonificacao Recebida" (ja usado so na MO2 desde 14-15/09)
+nas 3 lojas, isso foi aplicado agora em MO1/MO2/MO4 igualmente.
 ==============================================================================
 
 ------------------------------------------------------------------------------
 LOJA MO1
 ------------------------------------------------------------------------------
-Base: 4213 titulos (era 4138). Report e Mov Entradas (Rel 10497)
-atualizados: bruto novo cobre 01/06/2026 a 31/12/2026 (extraido 14/09/2026
-09:08). Export novo ja comecava em 01/06/2026 (mesma data do anterior) -
-nenhuma linha antiga precisou ser preservada por merge, o export novo virou
-a base inteira do periodo.
+Base (Report): 4.213 titulos - SEM ALTERACAO nesta rodada.
+
+Mov Entradas (Rel 10497): reconstruida com o bruto de 16/09/2026 22:27,
+20.483 linhas (era 19.722). Coluna auxiliar nova "Bonificacao (aux)"
+(col P, Op 171/172 = "SIM"): 193 linhas SIM.
+
+Notas Fiscais (Rel 19): reconstruida com o bruto 10502 de 16/09/2026 22:12,
+1.889 linhas, ordenada por Data Movimento. Coluna auxiliar "Tipo (aux)"
+adicionada/recalculada: 1.810 MERCADORIA / 0 BONIFICACAO / 79 OUTRO
+(bonificacao nao aparece nesse relatorio, so no 10497). Colunas orfas de
+versao antiga (N-Q: "resumo mes"/formulas quebradas) foram limpas.
 
 RECONCILIACAO (Diario / Classificacao / Grupos / Mensal batem mes a mes)
   Fluxo (entra no Resumo Diario) ....... R$ 5.202.166,30
@@ -29,86 +44,84 @@ RECONCILIACAO (Diario / Classificacao / Grupos / Mensal batem mes a mes)
   Excluido do fluxo (lista editavel AE)  R$   250.000,00  (PREVIA DOS EMPRESTIMOS)
   TOTAL GERAL COMPLETO (fluxo + excluido) R$ 5.452.166,30
   Mercadorias: Diario / Mensal / Grupos  R$ 3.405.062,35 / R$ 3.405.062,35 / R$ 3.405.062,35  OK
-  Classificacoes sem grupo (n/d, todos os meses) ....... R$ 0,00
-  Recalculo LibreOffice: 0 erros (26.172 formulas)
+  Resumo Grupos = TOTAL GERAL em TODOS os meses (checado coluna a coluna): OK
+  Classificacoes sem grupo (n/d / a revisar, todos os meses) .......... R$ 0,00
+  Recalculo LibreOffice: 0 erros (25.743 formulas)
 
-PESO DAS COMPRAS
-  Mercadorias p/ revenda ............... R$ 3.405.062,35 (65.5% do fluxo)
-  Outras despesas ...................... R$ 1.797.103,95
-
-VENDA x COMPRA (aba Resultado) - Venda Anual (Base) NAO mudou nesta rodada:
-  Data de corte de venda: 11/09/2026 08:15 (sem alteracao)
-  Venda Set/2026 (parcial, mesma da rodada anterior): R$ 400.915,44
-  Comprado a Mais/a Menos TOTAL (todo o periodo com comparavel) . R$ -1.007.136,77
+VENDA x COMPRA (aba Resultado) - Venda Anual (Base) ATUALIZADA nesta rodada:
+  Data de corte de venda: 15/09/2026 07:50:29 (era 11/09/2026 08:15:26)
+  Venda Set/2026 (parcial, cresceu): R$ 559.125,83 (era R$ 400.915,44)
+  Jan-Ago/2026: sem alteracao (meses fechados, mesmo valor do relatorio novo)
+  Comprado a Mais/a Menos TOTAL (todo o periodo com comparavel) . R$ -1.142.944,57
     (negativo = comprou menos que a sugestao nesses meses)
-  Set/2026: Compra Sugerida R$ 1.004.745,49 | Compra Real R$ 678.425,69 |
-            Comprado a Menos R$ -326.319,80
-  Expectativa de Venda do Mes Corrente (Set/2026, sem alteracao): R$ 1.093.405,75
-  Despesa Geral (Set/2026, aba Resultado col. L) ....... R$ 325.589,80
-  Resultado (Venda-Compra-DespGeral, Set/2026) ......... R$ -603.100,05
+  Notas que Chegaram (Rel 19, filtro Compra Mercadoria+Produtor Rural)
+    TOTAL periodo (Jun-Set/2026, unico com dado) ....... R$ 3.213.338,74
+  Bonificacao Recebida (Rel 10497, Op 171/172) TOTAL .... R$ 13.685,96
+  Expectativa de Venda do Mes Corrente (Set/2026) ....... R$ 1.118.251,66
+  Sem #REF! na aba Resultado. Compra Sugerida usa mes anterior (nao
+  seguinte). Comprado a Mais compara sempre a mesma linha.
 
-ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas
-(Mov Entradas atualizada, bruto novo ate 31/12/2026, 19.722 linhas)
-  NF extraida da Observacao ............ 2102
-  NF encontrada na Movimentacao ........ 1812
-  NF nao encontrada (alerta) ........... 290
-
-Mercadorias Revenda: reconstruida (2490 linhas, era 2428).
-
-Classificacoes novas na base: "TAXAS ESTADUAIS" (R$ 50,00, so em Set/2026)
-apareceu pela primeira vez e nao existia em nenhuma das 3 lojas ainda.
-Classificada como grupo "Impostos" por natureza contabil (nao havia
-referencia nas outras lojas para reaproveitar) - editavel na aba Resumo
-Grupos, coluna AC, se a Neila quiser reclassificar. Adicionada tambem como
-nova linha na aba Resumo Classificacao.
+ITEM RECEBIDO (Nota Fiscal) - cruzamento Report x Mov Entradas (colunas AB/AC)
+  NF extraida da Observacao (coluna AC preenchida) ..... 2.102 linhas
+  Item recebido encontrado na Movimentacao (AB) ........ 1.813
+  "nao encontrado" (AB, alerta) ......................... 289
+  (formulas AB/AC ja existiam e estavam corretas; recalcularam sozinhas
+  porque a Mov Entradas mudou - nao precisou reprocessar o texto)
 
 ------------------------------------------------------------------------------
 LOJA MO2
 ------------------------------------------------------------------------------
-Base: 2104 titulos (era 2076). Report e Mov Entradas (Rel 10497)
-atualizados: bruto novo cobre 01/06/2026 a 31/12/2026 (extraido 14/09/2026
-09:09).
+Base (Report): 2.157 titulos - SEM ALTERACAO nesta rodada.
+
+Mov Entradas (Rel 10497): reconstruida com o bruto de 16/09/2026 22:30,
+8.667 linhas (era 8.666 aprox.). Coluna "Bonificacao (aux)" ja existia:
+44 linhas SIM.
+
+Notas Fiscais (Rel 19): reconstruida com o bruto 10502 de 16/09/2026 22:13,
+959 linhas, ordenada por Data Movimento. Coluna "Tipo (aux)": 935
+MERCADORIA / 0 BONIFICACAO / 24 OUTRO. Colunas orfas antigas (N/O: "Data" /
+"Total Mercadoria do Dia", nao referenciadas em nenhuma outra aba) limpas.
 
 RECONCILIACAO (Diario / Classificacao / Grupos / Mensal batem mes a mes)
-  Fluxo (entra no Resumo Diario) ....... R$ 1.641.279,98
-    Outras Despesas ..................... R$   535.933,80
-    Mercadorias P/Revenda ................ R$ 1.105.346,18
+  Fluxo (entra no Resumo Diario) ....... R$ 1.675.373,44
+    Outras Despesas ..................... R$   543.420,67
+    Mercadorias P/Revenda ................ R$ 1.131.952,77
   Excluido do fluxo (lista editavel AE)  R$         0,00
-  TOTAL GERAL COMPLETO .................. R$ 1.641.279,98
-  Mercadorias: Diario / Mensal / Grupos  R$ 1.105.346,18 / R$ 1.105.346,18 / R$ 1.105.346,18  OK
-  Classificacoes sem grupo (n/d, todos os meses) ....... R$ 0,00
-  Recalculo LibreOffice: 0 erros (15.763 formulas)
+  TOTAL GERAL COMPLETO .................. R$ 1.675.373,44
+  Mercadorias: Diario / Mensal / Grupos  R$ 1.131.952,77 / R$ 1.131.952,77 / R$ 1.131.952,77  OK
+  Resumo Grupos = TOTAL GERAL em TODOS os meses (checado coluna a coluna): OK
+  Classificacoes sem grupo (n/d / a revisar, todos os meses) .......... R$ 0,00
+  Recalculo LibreOffice: 0 erros (15.596 formulas)
 
-PESO DAS COMPRAS
-  Mercadorias p/ revenda ............... R$ 1.105.346,18 (67.3% do fluxo)
-  Outras despesas ...................... R$   535.933,80
+VENDA x COMPRA (aba Resultado) - Venda Anual (Base) NAO mudou nesta rodada
+(bruto 10352 da MO2 com hash identico ao ja processado):
+  Data de corte de venda: 15/09/2026 07:51:40 (sem alteracao nesta rodada)
+  Venda Set/2026 (parcial, sem alteracao): R$ 176.362,99
+  Comprado a Mais/a Menos TOTAL (todo o periodo com comparavel) . R$ -42.696,65
+  Notas que Chegaram (Rel 19) TOTAL periodo ............. R$ 1.033.543,75
+  Bonificacao Recebida (Rel 10497) TOTAL ................ R$ 2.144,17
+  Expectativa de Venda do Mes Corrente (Set/2026) ........ R$ 352.725,98
+  Sem #REF!. Compra Sugerida usa mes anterior. Comprado a Mais compara a
+  mesma linha.
 
-VENDA x COMPRA (aba Resultado) - Venda Anual (Base) NAO mudou nesta rodada:
-  Data de corte de venda: 11/09/2026 08:17 (sem alteracao)
-  Venda Set/2026 (parcial, sem alteracao): R$ 129.788,92
-  Comprado a Mais/a Menos TOTAL (todo o periodo com comparavel) . R$ -36.701,39
-  Set/2026: Compra Sugerida R$ 276.163,83 | Compra Real R$ 233.311,12 |
-            Comprado a Menos R$ -42.852,71
-  Expectativa de Venda do Mes Corrente (Set/2026, sem alteracao): R$ 353.969,78
-  Despesa Geral (Set/2026, aba Resultado col. L) ....... R$ 59.664,31
-  Resultado (Venda-Compra-DespGeral, Set/2026) ......... R$ -163.186,51
-
-ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas
-(Mov Entradas atualizada, bruto novo ate 31/12/2026, 8.480 linhas)
-  NF extraida da Observacao ............ 1177
-  NF encontrada na Movimentacao ........ 1010
-  NF nao encontrada (alerta) ........... 167
-
-Mercadorias Revenda: reconstruida (1357 linhas, era 1333).
-
-Classificacoes novas na base: nenhuma sem grupo mapeado.
+ITEM RECEBIDO (Nota Fiscal) - cruzamento Report x Mov Entradas (colunas AB/AC)
+  NF extraida da Observacao (coluna AC preenchida) ..... 1.205 linhas
+  Item recebido encontrado na Movimentacao (AB) ........ 1.024
+  "nao encontrado" (AB, alerta) ......................... 181
 
 ------------------------------------------------------------------------------
 LOJA MO4
 ------------------------------------------------------------------------------
-Base: 3719 titulos (era 3661). Report e Mov Entradas (Rel 10497)
-atualizados: bruto novo cobre 01/06/2026 a 31/12/2026 (extraido 14/09/2026
-09:10).
+Base (Report): 3.719 titulos - SEM ALTERACAO nesta rodada.
+
+Mov Entradas (Rel 10497): reconstruida com o bruto de 16/09/2026 22:33,
+10.780 linhas (era 10.436). Coluna auxiliar nova "Bonificacao (aux)"
+(col P, Op 171/172 = "SIM"): 100 linhas SIM.
+
+Notas Fiscais (Rel 19): reconstruida com o bruto 10502 de 16/09/2026 22:15,
+1.100 linhas, ordenada por Data Movimento. Coluna auxiliar nova "Tipo (aux)":
+1.081 MERCADORIA / 0 BONIFICACAO / 19 OUTRO. Colunas orfas de versao antiga
+(N-Q: "resumo mes"/formulas quebradas) foram limpas.
 
 RECONCILIACAO (Diario / Classificacao / Grupos / Mensal batem mes a mes)
   Fluxo (entra no Resumo Diario) ....... R$ 2.245.052,21
@@ -117,136 +130,114 @@ RECONCILIACAO (Diario / Classificacao / Grupos / Mensal batem mes a mes)
   Excluido do fluxo (lista editavel AE)  R$   725.000,00  (PREVIA DOS EMPRESTIMOS)
   TOTAL GERAL COMPLETO (fluxo + excluido) R$ 2.970.052,21
   Mercadorias: Diario / Mensal / Grupos  R$ 1.532.934,07 / R$ 1.532.934,07 / R$ 1.532.934,07  OK
-  Classificacoes sem grupo (n/d, todos os meses) ....... R$ 0,00
-  Recalculo LibreOffice: 0 erros (21.005 formulas)
+  Resumo Grupos = TOTAL GERAL em TODOS os meses (checado coluna a coluna): OK
+  Classificacoes sem grupo (n/d / a revisar, todos os meses) .......... R$ 0,00
+  Recalculo LibreOffice: 0 erros (20.576 formulas)
 
-PESO DAS COMPRAS
-  Mercadorias p/ revenda ............... R$ 1.532.934,07 (68.3% do fluxo)
-  Outras despesas ...................... R$   712.118,14
+VENDA x COMPRA (aba Resultado) - Venda Anual (Base) ATUALIZADA nesta rodada:
+  Data de corte de venda: 15/09/2026 07:52:35 (era 11/09/2026 08:18:14)
+  Venda Set/2026 (parcial, cresceu): R$ 233.684,73 (era R$ 169.887,03)
+  Jan-Ago/2026: sem alteracao (meses fechados, mesmo valor do relatorio novo)
+  Comprado a Mais/a Menos TOTAL (todo o periodo com comparavel) . R$ -142.649,73
+  Notas que Chegaram (Rel 19, filtro Compra Mercadoria+Produtor Rural)
+    TOTAL periodo (Jun-Set/2026, unico com dado) ....... R$ 1.379.057,82
+  Bonificacao Recebida (Rel 10497, Op 171/172) TOTAL .... R$ 5.868,11
+  Expectativa de Venda do Mes Corrente (Set/2026) ....... R$ 467.369,46
+  Sem #REF! na aba Resultado. Compra Sugerida usa mes anterior (nao
+  seguinte). Comprado a Mais compara sempre a mesma linha.
 
-VENDA x COMPRA (aba Resultado) - Venda Anual (Base) NAO mudou nesta rodada:
-  Data de corte de venda: 11/09/2026 08:18 (sem alteracao)
-  Venda Set/2026 (parcial, sem alteracao): R$ 169.887,03
-  Comprado a Mais/a Menos TOTAL (todo o periodo com comparavel) . R$ -97.991,34
-  Set/2026: Compra Sugerida R$ 352.083,82 | Compra Real R$ 264.175,62 |
-            Comprado a Menos R$ -87.908,20
-  Expectativa de Venda do Mes Corrente (Set/2026, sem alteracao): R$ 463.328,26
-  Despesa Geral (Set/2026, aba Resultado col. L) ....... R$ 109.023,30
-  Resultado (Venda-Compra-DespGeral, Set/2026) ......... R$ -203.311,89
-
-ITEM RECEBIDO (Nota Fiscal) - cruzamento com a Movimentacao de Entradas
-(Mov Entradas atualizada, bruto novo ate 31/12/2026, 10.436 linhas)
-  NF extraida da Observacao ............ 1439
-  NF encontrada na Movimentacao ........ 1165
-  NF nao encontrada (alerta) ........... 274
-
-Mercadorias Revenda: reconstruida (1767 linhas, era 1733).
-
-Classificacoes novas na base: nenhuma sem grupo mapeado.
+ITEM RECEBIDO (Nota Fiscal) - cruzamento Report x Mov Entradas (colunas AB/AC)
+  NF extraida da Observacao (coluna AC preenchida) ..... 1.439 linhas
+  Item recebido encontrado na Movimentacao (AB) ........ 1.165
+  "nao encontrado" (AB, alerta) ......................... 274
 
 ==============================================================================
-RESUMO DA RODADA DE 14/09/2026 (execucao agendada automatica)
+RESUMO DA RODADA DE 17/09/2026
 
-As 3 lojas (MO1, MO2, MO4) tiveram bruto novo hoje na pasta "RELATORIOS
-CISS" (extracao ~09:08-09:11), entao as 3 foram atualizadas juntas. A base
-Venda Anual (10352) nao mudou - permanece com a extracao de 11/09/2026.
+Nao houve boletos novos (Report/Resumo Diario/Mensal/Classificacao/Grupos
+inalterados nas 3 lojas). Atualizados apenas: Mov Entradas (Rel 10497) nas
+3 lojas, Notas Fiscais (Rel 19, a partir do bruto 10502) nas 3 lojas, e
+Venda Anual (Base) em MO1 e MO4 (MO2 sem bruto novo de Venda Anual desta
+vez). Como consequencia, as colunas J (Notas que Chegaram) e N (Bonificacao
+Recebida) da aba Resultado recalcularam com dado novo nas 3 lojas, e o
+criterio de "Notas que Chegaram" (que so estava ativo na MO2 desde 14-15/09)
+foi replicado para MO1 e MO4 nesta rodada, a pedido da Neila.
 
-Total geral (fluxo, as 3 lojas somadas): R$ 9.088.498,49
-Total Mercadorias p/Revenda (as 3 lojas somadas): R$ 6.043.342,60
-Total NF identificada na Observacao, encontrada na Movimentacao (3 lojas):
-  3.987 encontradas / 731 "nao encontrada" (alerta de mercadoria ainda nao
-  lancada na movimentacao de entrada apesar do boleto ja estar na base).
+Total geral (fluxo + excluido, as 3 lojas somadas): R$ 10.097.591,95
+Total Mercadorias P/Revenda (as 3 lojas somadas): R$ 6.069.949,19
+Numero de lancamentos (titulos): MO1 4.213 | MO2 2.157 | MO4 3.719
+Numero de classificacoes unicas: MO1 82 | MO2 54 | MO4 58
+Reconciliacao: bateu nas 3 lojas (Diario+excluido = TOTAL GERAL;
+Resumo Grupos = TOTAL GERAL mes a mes; Resumo Classificacao/Mensal
+conferem com Mercadorias do Resumo Diario/Grupos). Nenhuma linha
+"n/d / a revisar" acesa em nenhuma loja.
+Comprado a Mais/a Menos TOTAL: MO1 R$ -1.142.944,57 | MO2 R$ -42.696,65 |
+  MO4 R$ -142.649,73 (todas negativas = compraram menos que a sugestao
+  no periodo com dado comparavel).
+Venda Anual / Data de corte: MO1 e MO4 atualizadas (corte 15/09/2026,
+  Set/2026 cresceu nas duas). MO2 sem alteracao (bruto identico).
+Item recebido (Nota Fiscal) - NF identificada x "nao encontrado":
+  MO1: 1.813 encontradas / 289 nao encontradas (de 2.102 com NF na Observacao)
+  MO2: 1.024 encontradas / 181 nao encontradas (de 1.205 com NF na Observacao)
+  MO4: 1.165 encontradas / 274 nao encontradas (de 1.439 com NF na Observacao)
+  Total 3 lojas: 4.002 encontradas / 744 nao encontradas.
 
-Classificacao nova sem grupo mapeado em nenhuma das 3 lojas ate esta rodada:
-"TAXAS ESTADUAIS" (MO1, R$ 50,00, Set/2026) - ja resolvida nesta mesma
-rodada, classificada como "Impostos" por natureza contabil (revisar/editar
-em Resumo Grupos!AC se a Neila preferir outro grupo). Apos essa correcao,
-nenhuma loja ficou com a linha "n/d / a revisar" acesa.
-
-AVISO (repetido das rodadas anteriores) - pasta "Downloads\download claude
-cowork" (raiz): os arquivos soltos "boletos moX.xls", "VENDA ANUAL MOx.xls"
-e "Movimentacao Geral de Entradas ... - 10497 - N.xls" nao existem mais
-nessa pasta desde pelo menos 08/09/2026 - so a subpasta "RELATORIOS CISS"
-(skill automatica "relatorios-ciss") tem brutos frescos, com nomenclatura
-por codigo de relatorio (10491/10352/10497). Se o processo antigo que
-deixava brutos soltos na pasta raiz nao estiver mais em uso, a descricao
-desta tarefa agendada pode ser atualizada para apontar direto pra
-"RELATORIOS CISS" em vez de procurar na raiz primeiro.
+Classificacao nova sem grupo mapeado: nenhuma nesta rodada (a base nao
+mudou, entao nao ha classificacao nova).
 
 Entregas copiadas para a pasta de entregas (Downloads\download claude
 cowork\entregas): boletos mo1 - analise.xlsx, boletos mo2 - analise.xlsx e
-boletos mo4 - analise.xlsx (as 3, ja que as 3 mudaram nesta rodada).
+boletos mo4 - analise.xlsx (as 3, ja que Mov Entradas/Notas Fiscais mudaram
+nas 3 e Venda Anual mudou em 2 delas). Nenhum arquivo de entrega estava
+aberto no Excel (sem "~$" ao lado) - as 3 copias foram feitas sem risco de
+conflito.
 
 ==============================================================================
-ATUALIZACAO NA MESMA RODADA (14/09/2026, apos feedback da Neila) - SO NA MO2,
-PENDENTE DE VALIDACAO ANTES DE REPLICAR PRA MO1/MO4
+HISTORICO DE RODADAS ANTERIORES (mantido para referencia)
+==============================================================================
 
+------------------------------------------------------------------------------
+RODADA 14/09/2026 (execucao agendada automatica)
+------------------------------------------------------------------------------
+As 3 lojas (MO1, MO2, MO4) tiveram bruto novo naquele dia na pasta
+"RELATORIOS CISS" (extracao ~09:08-09:11), entao as 3 foram atualizadas
+juntas (Report + Mov Entradas). A base Venda Anual (10352) nao mudou
+naquela rodada - permaneceu com a extracao de 11/09/2026.
+
+Total geral (fluxo, as 3 lojas somadas): R$ 9.088.498,49
+Total Mercadorias p/Revenda (as 3 lojas somadas): R$ 6.043.342,60
+Classificacao nova sem grupo mapeado ate aquela rodada: "TAXAS ESTADUAIS"
+(MO1, R$ 50,00, Set/2026) - resolvida na mesma rodada, classificada como
+"Impostos" por natureza contabil.
+
+------------------------------------------------------------------------------
+ATUALIZACAO NA MESMA RODADA (14/09/2026, apos feedback da Neila) - SO NA MO2
+------------------------------------------------------------------------------
 A Neila pediu para aplicar so na loja 02 primeiro, validar, e so depois
-replicar pras outras duas. MO1 e MO4 foram revertidas para o estado da
-rodada anterior (sem essa mudanca) - continuam so com a atualizacao de
-dados (10491/10497) da secao anterior deste arquivo.
+replicar pras outras duas (o que veio a acontecer nesta rodada de
+17/09/2026, ver secoes acima).
 
-1) Relatorio 10502 (Notas Fiscais de Compras / "Rel 19") estava desatualizado
-   na aba "Notas Fiscais (Rel 19)" - atualizado na MO2 com o bruto de hoje
-   (extracao 14/09/2026 09:21).
+1) Relatorio 10502 (Notas Fiscais de Compras / "Rel 19") atualizado na aba
+   "Notas Fiscais (Rel 19)" da MO2 com o bruto daquele dia.
+2) Regra nova da Neila para "Notas que Chegaram" (coluna J, MO2): considerar
+   APENAS "COMPRA DE MERCADORIA" (com ou sem financeiro, codigos 1 e 11) e
+   "COMPRA DE PRODUTOR RURAL" (codigos 2 e 6) - excluindo qualquer outra
+   operacao (uso/consumo, embalagens, manutencao, imobilizado etc).
+   Implementado via coluna auxiliar "Tipo (aux)" (col L) e SUMIFS filtrado.
+3) Bonificacao sinalizada a parte, SEM entrar no numero principal: coluna N
+   na aba Resultado ("Bonificacao Recebida (Rel 10497)"), somando Mov
+   Entradas filtrado por Op 171/172 (coluna auxiliar "Bonificacao (aux)").
 
-2) Regra nova da Neila para "Notas que Chegaram" (coluna J da aba Resultado,
-   MO2): considerar APENAS operacoes "COMPRA DE MERCADORIA - SEM FINANCEIRO"
-   (codigo 11) e "COMPRA DE PRODUTOR RURAL" (codigos 2 e 6) - excluindo
-   "COMPRA DE MERCADORIA" com financeiro (codigo 1, que ja vira boleto/
-   contas a pagar e seria contado de novo) e qualquer outra operacao
-   (uso/consumo, embalagens, manutencao, imobilizado etc). Implementado via
-   coluna auxiliar "Tipo (aux)" (col L) na aba Notas Fiscais (Rel 19) e
-   SUMIFS filtrado por ela. Cabecalho da coluna J atualizado para deixar
-   claro o criterio.
+------------------------------------------------------------------------------
+RODADA MO2 SOB DEMANDA (14/09/2026, ~10:55-11:00)
+------------------------------------------------------------------------------
+10352 (Venda Anual) com bruto novo (extracao 14/09 10:20:45): Set/2026
+subiu de R$ 129.788,92 para R$ 165.932,20. 10491/10497 sem novidade.
 
-   O relatorio 10502 nao traz nenhuma bonificacao (codigos 171/172) - essas
-   so aparecem no relatorio 10497 (Movimentacao Geral de Entradas), entao
-   nao ha risco de contar bonificacao duas vezes dentro do proprio Rel 19.
-
-3) Bonificacao sinalizada a parte, SEM entrar no numero principal: nova
-   coluna N na aba Resultado (MO2, "Bonificacao Recebida (Rel 10497)"),
-   somando Mov Entradas (Rel 10497) filtrado por Op 171/172 (coluna
-   auxiliar "Bonificacao (aux)", col P, adicionada nessa aba), mes a mes.
-
-Totais MO2 (Jun-Set/2026, unico periodo com dado ate agora):
-  Notas que Chegaram R$ 690.072,21 | Bonificacao Recebida R$ 2.031,91
-
-Recalculo LibreOffice apos essas mudancas: 0 erros na MO2 (15.776 formulas).
-
-Entregas: so "boletos mo2 - analise.xlsx" foi recopiada com essa mudanca.
-"boletos mo1 - analise.xlsx" e "boletos mo4 - analise.xlsx" foram
-recopiadas de volta com a versao SEM o filtro (revertida), pra pasta de
-entregas nao ficar com MO1/MO4 na frente da MO2 sem a Neila ter validado.
-
-Regra ja documentada na skill boletos-mercadinho para quando a Neila
-confirmar e pedir pra replicar pra MO1/MO4.
-
-==============================================================================
-RODADA MO2 SOB DEMANDA (14/09/2026, ~10:55-11:00, "rode a loja 2")
-
-A Neila pediu pra rodar a MO2 de novo depois de validar a mudanca de Notas
-que Chegaram. Verificacao na pasta RELATORIOS CISS:
-  - 10491 (Contas a Pagar) e 10497 (Movimentacao Geral de Entradas): sem
-    novo bruto desde a rodada anterior (mesmo tamanho de arquivo).
-  - 10502 (Resumo Notas Fiscais Compras): novo bruto (extracao 09:22), mas
-    dados IDENTICOS ao ja processado (930 notas, mesma distribuicao de
-    operacao, mesmo total MERCADORIA R$ 690.072,21) - nao mudou nada na
-    aba Notas Fiscais (Rel 19) nem em Notas que Chegaram/Bonificacao.
-  - 10352 (Venda Anual por Secao): novo bruto (extracao 14/09 10:20:45,
-    era 11/09 08:17:16) - Set/2026 (mes corrente, venda parcial) subiu de
-    R$ 129.788,92 para R$ 165.932,20. Jan-Ago sem alteracao. Atualizado na
-    aba "Venda Anual (Base)" (valor + data de corte).
-
-Impacto na aba Resultado (Set/2026): Venda do Mes R$ 165.932,20 (era
-R$ 129.788,92), Expectativa de Venda do Mes Corrente R$ 355.569,00 (era
-R$ 353.969,78), Resultado (Venda-Compra-DespGeral) R$ -127.043,23 (era
-R$ -163.186,51). Comprado a Mais/Menos TOTAL (periodo) R$ -62.001,69 (era
-R$ -36.701,39 - mudou porque a Compra Sugerida de Out/2026 usa a venda de
-Set como base (R$ 116.152,54, era R$ 90.658,84) e ja existem alguns
-boletos de Out lancados na base (Compra Real R$ 6.927,31), entao a
-diferenca daquele mes ficou mais negativa: R$ -109.225,23 (era
-R$ -83.924,93, com a Compra Sugerida antiga de R$ 90.852,24)).
-
-Recalculo LibreOffice: 0 erros (15.776 formulas). Entregas: "boletos mo2 -
-analise.xlsx" recopiada com essa atualizacao.
+------------------------------------------------------------------------------
+RODADA 15/09/2026 (MO2)
+------------------------------------------------------------------------------
+Commit "Atualizacao de boletos MO2 - 15/09/2026": Venda Anual MO2 e demais
+abas atualizadas com bruto daquele dia (base para a Data de corte
+15/09/2026 07:51:40 que a MO2 ainda mantem nesta rodada de 17/09/2026, ja
+que nao houve bruto novo de Venda Anual para MO2 hoje).
