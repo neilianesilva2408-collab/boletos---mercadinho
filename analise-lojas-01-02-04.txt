@@ -1,4 +1,134 @@
 ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
+Lojas 01, 02 e 04 - atualizado em 22/09/2026
+
+O QUE MUDOU NESTA RODADA: BRUTOS NOVOS DE HOJE NAS 3 LOJAS (os 4 relatorios).
+Fonte: "Downloads\download claude cowork\RELATORIOS CISS", extracao de
+22/09/2026 07:57-08:15 - hash diferente do que estava no repo:
+  - 10491 CONTAS A PAGAR -> "boletos mo1/mo2/mo4.xls"                   (NOVO)
+  - 10497 MOVIMENTACAO GERAL DE ENTRADAS -> "Movimentacao Geral de Entradas
+    MO1/MO2/MO4.xls"                                                    (NOVO)
+  - 10502 RESUMO NOTAS FISCAIS COMPRAS -> "Resumo Notas Fiscais Compras
+    MO1/MO2/MO4.xls" (NOVO; aba "Notas Fiscais (Rel 19)" atualizada)
+  - 10352 VENDA ANUAL -> "VENDA ANUAL MO1/MO2/MO4.xls" (NOVO). Hoje o arquivo
+    veio com o nome "10352 - VENDA ANUAL POR SECAO - MOx"; conferido: e o MESMO
+    relatorio de sempre ("10352 - Venda Anual por Secao", linha Total por mes,
+    mesmos valores Jan-Ago do arquivo antigo) - so o nome do arquivo mudou.
+    Nao havia nenhum "10352 - VENDA ANUAL - MOx" na pasta hoje.
+Nos dias 19, 20 e 21/09 a extracao do CISS nao gerou arquivo novo (os brutos
+estavam parados em 18/09) - por isso nao houve rodada nesses dias.
+
+Merge da aba Report (regra da janela): export cobre 01/06/2026 a 31/12/2026;
+data de corte = 01/06/2026; historico anterior ao corte mantido = 0 linhas nas
+3 lojas (a base tambem comeca em 01/06/2026). Colunas auxiliares Z, AA, AB e
+AC recalculadas para TODAS as linhas no mesmo passo do merge.
+Ajustes desta rodada em todas as lojas:
+  - Resumo Diario: os 105 rotulos "Subtotal Semana" deixaram de usar TEXT()
+    (no Excel em portugues saia "01/01/yyyy") e viraram texto fixo.
+  - Formatos com "R$" que ainda restavam (Resumo Grupos, Resumo
+    Classificacao, Notas Fiscais, Venda Anual) trocados por #,##0.00.
+  - Valores CONFERIDOS de Ago/2026 (MO2 e MO4) preservados como numero fixo.
+Conferencia no Excel de verdade (copia aberta por COM, CalculateFullRebuild):
+  mesmos totais do LibreOffice nas 3 lojas, n/d zerado, Report!AA10 = SIM.
+==============================================================================
+
+------------------------------------------------------------------------------
+LOJA MO1
+------------------------------------------------------------------------------
+Base (Report): 4.777 titulos (era 4.555). 82 classificacoes (nenhuma sem grupo).
+  Fluxo (entra no Resumo Diario) ....... 5.653.911,79  (era 5.554.076,61)
+    Outras Despesas ..................... 1.919.330,60
+    Mercadorias P/Revenda ............... 3.734.581,19  (era 3.652.066,00)
+  Excluido do fluxo (lista AE) ......... 250.000,00  (PREVIA DOS EMPRESTIMOS)
+  TOTAL GERAL COMPLETO ................. 5.903.911,79
+RECONCILIACAO mes a mes (Jan/2026-Dez/2027): TOTAL GERAL = Resumo Grupos =
+  Resumo Classificacao = Resumo Mensal = Resumo Diario: OK em todos os meses.
+  n/d / a revisar: 0,00. Diario: fluxo + excluido = TOTAL GERAL: OK.
+  Recalculo: 0 erros (27.949 formulas).
+Item recebido (Nota Fiscal): 2.322 lancamentos com NF identificada na
+  Observacao; 2.014 encontrados na Mov Entradas; 308 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 85,84%) - formulas conferidas OK:
+  Compra Real total ............. 3.734.581,19
+  Comprado a Mais/a Menos TOTAL . -1.039.370,29 (era -895.940,92; a maior
+    parte e Out/2026, mes em aberto: sugerida 705.898,18 x 240.385,03 lancados)
+  Set/2026: compra real 827.457,71 x sugerida 1.004.745,49 = -177.287,78
+  Venda Anual: Set/2026 559.125,83 -> 822.341,77 (parcial); data de corte
+  22/09/2026 07:57:14. Expectativa de venda Set/2026 1.121.375,14.
+  Notas que Chegaram (Rel 19) total 3.372.689,00; Bonificacao (10497) 14.253,31.
+  ATENCAO: Ago/2026 da MO1 ainda NAO foi lancado como conferido. Existe
+  "DESPESA MO1 - 08 26 - CONCILIADO 4.xlsx", mas a aba "DESPESA TOTAL" dele
+  esta com #REF! (formula quebrada) e a compra aparece com dois valores
+  (Mercadorias P/Revenda 852.965,35 x grupo Mercadoria 859.923,35). O
+  fechamento da aba Resumo Despesas mostra DESPESA TOTAL 325.650,98. Ficou
+  pelo lancado (formula) ate a Neila confirmar qual numero vale.
+  (A Compra Real lancada de Ago, 852.965,35, ja bate com Mercadorias
+  P/Revenda da conciliacao.)
+
+------------------------------------------------------------------------------
+LOJA MO2
+------------------------------------------------------------------------------
+Base (Report): 2.324 titulos (era 2.268). 52 classificacoes (nenhuma nova).
+  Fluxo (entra no Resumo Diario) ....... 1.867.631,78  (era 1.835.174,45)
+    Outras Despesas ..................... 675.773,71
+    Mercadorias P/Revenda ............... 1.191.858,07  (era 1.161.446,18)
+  Excluido do fluxo (lista AE) ......... 0,00
+  TOTAL GERAL COMPLETO ................. 1.867.631,78
+RECONCILIACAO mes a mes: OK em todos os meses. n/d / a revisar: 0,00.
+  Recalculo: 0 erros (16.114 formulas).
+Item recebido (Nota Fiscal): 1.263 com NF identificada; 1.096 encontrados;
+  167 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 70%) - formulas conferidas OK:
+  Compra Real total ............. 1.194.148,07 (inclui Ago conciliado)
+  Comprado a Mais/a Menos TOTAL . -41.590,55 (era -10.913,24)
+  Set/2026: compra real 280.089,64 x sugerida 276.163,83 = +3.925,81
+  Venda Anual: Set/2026 176.362,99 -> 263.633,27 (parcial); corte
+  22/09/2026 07:59:34. Expectativa de venda Set/2026 359.499,91.
+  Notas que Chegaram total 1.088.455,13; Bonificacao 2.479,93.
+  Ago/2026 CONFERIDO: Compra Real 286.202,43 e Despesa Geral 108.317,57
+  (valores fixos de "DESPESA MO2 - 08 26.xlsx") - preservados.
+
+------------------------------------------------------------------------------
+LOJA MO4
+------------------------------------------------------------------------------
+Base (Report): 3.947 titulos (era 3.864). 60 classificacoes (1 nova na loja).
+  Fluxo (entra no Resumo Diario) ....... 2.384.579,80  (era 2.335.879,23)
+    Outras Despesas ..................... 741.902,37
+    Mercadorias P/Revenda ............... 1.642.677,43  (era 1.601.687,25)
+  Excluido do fluxo (lista AE) ......... 725.000,00  (PREVIA DOS EMPRESTIMOS)
+  TOTAL GERAL COMPLETO ................. 3.109.579,80
+CLASSIFICACAO NOVA NA MO4: "MANUTENCAO DE EQUIPAMENTOS" -> grupo "Despesa",
+  o mesmo que a Neila ja usa nas outras lojas (editavel em Resumo Grupos!AC).
+RECONCILIACAO mes a mes: OK em todos os meses. n/d / a revisar: 0,00.
+  Recalculo: 0 erros (21.627 formulas).
+Item recebido (Nota Fiscal): 1.554 com NF identificada; 1.260 encontrados;
+  294 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 70%) - formulas conferidas OK:
+  Compra Real total ............. 1.642.853,11 (inclui Ago conciliado)
+  Comprado a Mais/a Menos TOTAL . -109.666,34 (era -73.720,87)
+  Set/2026: compra real 327.765,19 x sugerida 352.083,82 = -24.318,63
+  Venda Anual: Set/2026 233.684,73 -> 343.592,81 (parcial); corte
+  22/09/2026 08:00:28. Expectativa de venda Set/2026 468.535,65.
+  Notas que Chegaram total 1.440.084,10; Bonificacao 6.214,16.
+  Ago/2026 CONFERIDO: Compra Real 365.894,98 e Despesa Geral 131.187,64
+  (valores fixos de "DESPESA MO4 - 08 26.xlsx") - preservados.
+
+------------------------------------------------------------------------------
+LEITURA RAPIDA
+------------------------------------------------------------------------------
+- Set/2026 segue em aberto: venda ate 22/09 x boletos com vencimento no mes
+  inteiro. O "Resultado" de Set (MO1 -429 mil, MO2 -122 mil, MO4 -117 mil)
+  compara 22 dias de venda com o mes cheio de compra - nao e prejuizo real.
+  Pela expectativa de venda (mes cheio) a leitura e bem menos negativa.
+- MO2 ja passou da compra sugerida de Set (+3,9 mil); MO1 e MO4 ainda estao
+  abaixo (-177 mil e -24 mil), com 8 dias pela frente.
+- "Nao encontrado" no Item recebido: 308 (MO1), 167 (MO2), 294 (MO4) boletos
+  cuja NF nao aparece na Movimentacao de Entradas - alerta de mercadoria
+  possivelmente nao recebida ou NF digitada errada na observacao.
+
+##############################################################################
+RODADA ANTERIOR (18/09/2026) - mantida abaixo como historico
+##############################################################################
+
+ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
 Lojas 01, 02 e 04 - atualizado em 18/09/2026
 
 O QUE MUDOU NESTA RODADA: BRUTOS NOVOS DE HOJE NAS 3 LOJAS.
