@@ -1,4 +1,101 @@
 ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
+Lojas 01, 02 e 04 - atualizado em 25/09/2026
+
+O QUE MUDOU NESTA RODADA: BRUTOS NOVOS DE HOJE NAS 3 LOJAS (os 4 relatorios).
+Fonte: "Downloads\download claude cowork\RELATORIOS CISS", extracao de
+25/09/2026 07:08-07:16 - hash diferente do repo nos 12 arquivos:
+  - 10491 - CONTAS A PAGAR MERC OLIVEIRA -> "boletos mo1/mo2/mo4.xls"     (NOVO)
+  - 10497 - MOVIMENTACAO GERAL ENTRADAS -> "Movimentacao Geral de Entradas
+    MO1/MO2/MO4.xls"                                                    (NOVO)
+  - 10502 - RESUMO NOTAS FISCAIS COMPRAS -> "Resumo Notas Fiscais Compras
+    MO1/MO2/MO4.xls" (NOVO; bloco "soma por mes" N:P preservado, P = coluna J
+    da Resultado em todos os meses)
+  - 10352 - VENDA ANUAL SECAO -> "VENDA ANUAL MO1/MO2/MO4.xls"           (NOVO)
+Loja conferida dentro de cada arquivo (chave 1/2/3 = MO1/MO2/MO4).
+
+Merge da aba Report: export cobre 01/06/2026 a 31/12/2026; corte 01/06/2026;
+historico anterior ao corte mantido = 0 linhas nas 3 lojas. Colunas Z, AA, AB
+e AC recalculadas para TODAS as linhas. Nenhuma classificacao nova sem grupo
+(n/d zerado nas 3). Recalculo: 0 erros nas 3. Conferencia no Excel (copia por
+COM): mesmos totais, n/d zerado, Report!AA10 = SIM.
+==============================================================================
+
+------------------------------------------------------------------------------
+LOJA MO1
+------------------------------------------------------------------------------
+Base (Report): 4.909 titulos (era 4.860). 82 classificacoes (nenhuma sem grupo).
+  Fluxo (entra no Resumo Diario) ....... 5.823.266,36  (era 5.779.669,20)
+    Outras Despesas ..................... 1.974.934,45
+    Mercadorias P/Revenda ............... 3.848.331,91  (era 3.823.059,60)
+  Excluido do fluxo (lista AE) ......... 250.000,00  (PREVIA DOS EMPRESTIMOS)
+  TOTAL GERAL COMPLETO ................. 6.073.266,36
+RECONCILIACAO mes a mes: OK em todos os meses. n/d / a revisar: 0,00.
+Item recebido (Nota Fiscal): 2.384 com NF identificada; 2.075 encontrados;
+  309 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 85,84%):
+  Comprado a Mais/a Menos TOTAL . -1.009.970,05 (era -1.008.493,02)
+  Set/2026: compra real 891.163,88 x sugerida 1.004.745,49 = -113.581,61
+  Venda Anual: Set/2026 889.444,68 -> 920.606,54 (parcial); corte
+  25/09/2026 07:08:04. Expectativa de venda Set/2026 1.104.727,85.
+  Notas que Chegaram total 3.485.623,93; Bonificacao 14.726,42.
+  Ago/2026: Despesa Geral 325.650,98 conferida (fixa, preservada).
+
+------------------------------------------------------------------------------
+LOJA MO2
+------------------------------------------------------------------------------
+Base (Report): 2.391 titulos (era 2.376). 53 classificacoes (nenhuma sem grupo).
+  Fluxo (entra no Resumo Diario) ....... 1.898.641,03  (era 1.891.019,15)
+    Outras Despesas ..................... 683.549,18
+    Mercadorias P/Revenda ............... 1.215.091,85  (era 1.206.824,54)
+  Excluido do fluxo (lista AE) ......... 0,00
+  TOTAL GERAL COMPLETO ................. 1.898.641,03
+RECONCILIACAO mes a mes: OK em todos os meses. n/d / a revisar: 0,00.
+Item recebido (Nota Fiscal): 1.290 com NF identificada; 1.121 encontrados;
+  169 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 70%):
+  Comprado a Mais/a Menos TOTAL . -43.884,72 (era -44.067,24)
+  Set/2026: compra real 293.580,72 x sugerida 276.163,83 = +17.416,89
+  Venda Anual: Set/2026 288.552,07 -> 300.101,78 (parcial); corte
+  25/09/2026 07:10:18. Expectativa de venda Set/2026 360.122,14.
+  Notas que Chegaram total 1.110.964,90; Bonificacao 2.563,23.
+  Ago/2026 CONFERIDO: Compra Real 286.202,43 e Despesa Geral 108.317,57
+  (fixos de "DESPESA MO2 - 08 26.xlsx") - preservados.
+
+------------------------------------------------------------------------------
+LOJA MO4
+------------------------------------------------------------------------------
+Base (Report): 4.006 titulos (era 3.970). 60 classificacoes (nenhuma sem grupo).
+  Fluxo (entra no Resumo Diario) ....... 2.437.084,69  (era 2.395.294,43)
+    Outras Despesas ..................... 744.133,47
+    Mercadorias P/Revenda ............... 1.692.951,22  (era 1.651.691,96)
+  Excluido do fluxo (lista AE) ......... 725.000,00  (PREVIA DOS EMPRESTIMOS)
+  TOTAL GERAL COMPLETO ................. 3.162.084,69
+RECONCILIACAO mes a mes: OK em todos os meses. n/d / a revisar: 0,00.
+Item recebido (Nota Fiscal): 1.583 com NF identificada; 1.295 encontrados;
+  288 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 70%):
+  Comprado a Mais/a Menos TOTAL . -89.177,53 (era -120.684,25)
+  Set/2026: compra real 357.996,77 x sugerida 352.083,82 = +5.912,95
+  Venda Anual: Set/2026 372.210,58 -> 386.142,78 (parcial); corte
+  25/09/2026. Expectativa de venda Set/2026 463.371,34.
+  Notas que Chegaram total 1.494.869,12; Bonificacao 6.260,19.
+  Ago/2026 CONFERIDO: Compra Real 365.894,98 e Despesa Geral 131.187,64
+  (fixos de "DESPESA MO4 - 08 26.xlsx") - preservados.
+
+------------------------------------------------------------------------------
+LEITURA RAPIDA
+------------------------------------------------------------------------------
+- MO4 passou da compra sugerida de Set hoje (+5,9 mil; ontem -18 mil):
+  +23,9 mil de mercadoria lancada num dia. MO2 segue acima (+17,4 mil).
+  MO1 ainda abaixo (-113,6 mil), com 5 dias pela frente.
+- Resultado de Set ainda compara venda parcial (ate 24/09) com o mes cheio
+  de boletos - nao e prejuizo real.
+
+##############################################################################
+RODADA ANTERIOR (24/09/2026) - mantida abaixo como historico
+##############################################################################
+
+ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
 Lojas 01, 02 e 04 - atualizado em 24/09/2026
 
 O QUE MUDOU NESTA RODADA: BRUTOS NOVOS DE HOJE NAS 3 LOJAS (os 4 relatorios).
