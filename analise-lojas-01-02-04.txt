@@ -1,4 +1,66 @@
 ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
+Lojas 01, 02 e 04 - atualizado em 30/09/2026 (rodada manual a pedido da Neila)
+
+O QUE MUDOU NESTA RODADA: BRUTOS NOVOS DE HOJE NAS 3 LOJAS (os 4 relatorios).
+Fonte: relatorios de 30/09/2026 (extracao CISS 09:05-09:23) - os mesmos
+arquivos que estao no Google Drive da Neila (30 arquivos, tamanhos iguais).
+Base de partida: entregasoletos moX - analise.xlsx (29/09 10h, mais nova
+que o repo). Merge da aba Report: export 01/06 a 31/12/2026, historico
+anterior ao corte = 0 linhas. Colunas Z, AA, AB e AC recalculadas.
+Nenhuma classificacao nova sem grupo (n/d zerado nas 3). Recalculo: 0 erros.
+Bloco N:P de Notas Fiscais (Rel 19): P = coluna J da Resultado nas 3 lojas.
+==============================================================================
+
+------------------------------------------------------------------------------
+LOJA MO1
+------------------------------------------------------------------------------
+Base (Report): 5.261 titulos (era 5.129). 82 classificacoes (nenhuma sem grupo).
+  Fluxo (entra no Resumo Diario) ....... 5.993.636,87
+    Mercadorias P/Revenda ............... 3.936.903,56
+  Excluido do fluxo (lista AE) ......... 400.000,00  (PREVIA DOS EMPRESTIMOS; era 250.000,00)
+  TOTAL GERAL COMPLETO ................. 6.393.636,87
+RECONCILIACAO mes a mes: OK em todos os meses. n/d / a revisar: 0,00.
+Item recebido (Nota Fiscal): 2.444 com NF identificada; 294 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 70%):
+  Comprado a Mais/a Menos TOTAL . -160.674,27
+  Set/2026: compra real 917.154,63 x sugerida 819.340,45 = +97.814,18
+  Venda Anual: Set/2026 1.080.560,13 -> 1.114.571,13; corte 30/09/2026 09:05:36.
+
+------------------------------------------------------------------------------
+LOJA MO2
+------------------------------------------------------------------------------
+Base (Report): 2.473 titulos (era 2.457). 53 classificacoes (nenhuma sem grupo).
+  Fluxo (entra no Resumo Diario) ....... 1.949.609,50
+    Mercadorias P/Revenda ............... 1.258.142,11
+  Excluido do fluxo (lista AE) ......... 0,00
+  TOTAL GERAL COMPLETO ................. 1.949.609,50
+RECONCILIACAO mes a mes: OK em todos os meses. n/d / a revisar: 0,00.
+Item recebido (Nota Fiscal): 1.327 com NF identificada; 169 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 70%):
+  Comprado a Mais/a Menos TOTAL . -42.211,72
+  Set/2026: compra real 299.174,52 x sugerida 276.163,83 = +23.010,69
+  Venda Anual: Set/2026 346.504,15 -> 359.212,15; corte 30/09/2026 09:07:20.
+
+------------------------------------------------------------------------------
+LOJA MO4
+------------------------------------------------------------------------------
+Base (Report): 4.167 titulos (era 4.121). 60 classificacoes (nenhuma sem grupo).
+  Fluxo (entra no Resumo Diario) ....... 2.502.308,09
+    Mercadorias P/Revenda ............... 1.746.036,38
+  Excluido do fluxo (lista AE) ......... 725.000,00
+  TOTAL GERAL COMPLETO ................. 3.227.308,09
+RECONCILIACAO mes a mes: OK em todos os meses. n/d / a revisar: 0,00.
+Item recebido (Nota Fiscal): 1.628 com NF identificada; 287 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 70%):
+  Comprado a Mais/a Menos TOTAL . -94.054,82
+  Set/2026: compra real 364.497,97 x sugerida 352.083,82 = +12.414,15
+  Venda Anual: Set/2026 453.917,74 -> 468.946,28; corte 30/09/2026 09:07:42.
+
+##############################################################################
+HISTORICO - RODADAS ANTERIORES
+##############################################################################
+
+ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
 Lojas 01, 02 e 04 - atualizado em 29/09/2026
 
 O QUE MUDOU NESTA RODADA: BRUTOS NOVOS DE HOJE NAS 3 LOJAS (os 4 relatorios).
@@ -64,10 +126,6 @@ VENDA x COMPRA (Resultado):
   Set/2026: compra real 363.493,27 x sugerida 352.083,82 = +11.409,45
   Venda Anual: Set/2026 439.476,72 -> 453.917,74 (parcial); corte
   29/09/2026 07:44:28. Expectativa de venda Set/2026 469.570,08.
-
-##############################################################################
-HISTORICO - RODADAS ANTERIORES
-##############################################################################
 
 ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
 Lojas 01, 02 e 04 - atualizado em 28/09/2026
