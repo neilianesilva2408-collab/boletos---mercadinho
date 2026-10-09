@@ -1,4 +1,70 @@
 ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
+Lojas 01, 02 e 04 - atualizado em 09/10/2026 (rodada manual a pedido da Neila, 08h20)
+
+O QUE MUDOU NESTA RODADA: os 12 brutos de RELATORIOS CISS chegaram com data
+de hoje (06h45-06h57) e a extracao INTERNA tambem e de hoje (09/10 07h45-07h57)
+nas 3 lojas e nos 4 relatorios - copiados para o repo. Base de partida: o repo
+(entregas\boletos moX - analise.xlsx salvas depois da rodada de ontem, sem
+mudanca nas abas de analise). Colunas Z, AA, AB e AC recalculadas.
+Nenhuma classificacao nova sem grupo; n/d zerado nas 3.
+Resumo Diario: semanas de 2027 sem boleto ficam escondidas (pedido de 08/10).
+Recalculo: 0 erros nas 3. Bloco N:P de Notas Fiscais (Rel 19): P = coluna J
+da Resultado nas 3 lojas. Valores conciliados de Ago/2026 preservados.
+Outubro/2026 e o mes corrente (venda parcial ate 09/10 07h57).
+==============================================================================
+
+------------------------------------------------------------------------------
+LOJA MO1
+------------------------------------------------------------------------------
+Base (Report): 5.849 titulos (era 5.805). 83 classificacoes (nenhuma sem grupo).
+  Fluxo (entra no Resumo Diario) ....... 6.367.037,00
+    Mercadorias P/Revenda ............... 4.121.703,97
+  Excluido do fluxo (lista AE) ......... 400.000,00  (PREVIA DOS EMPRESTIMOS)
+  TOTAL GERAL COMPLETO ................. 6.767.037,00
+RECONCILIACAO mes a mes: OK em todos os meses. n/d / a revisar: 0,00.
+Item recebido (Nota Fiscal): 2.583 com NF identificada; 294 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 70%):
+  Comprado a Mais/a Menos TOTAL . -239.678,79 (Out ainda parcial)
+  Set/2026: compra real 918.460,23 x sugerida 819.340,45 = +99.119,78
+  Venda Anual: Out/2026 302.153,19 -> 340.681,87 (parcial); corte 09/10/2026 07:56:37.
+  Expectativa de Venda Out/2026: 1.173.459,77.
+
+------------------------------------------------------------------------------
+LOJA MO2
+------------------------------------------------------------------------------
+Base (Report): 2.653 titulos (era 2.632). 55 classificacoes (nenhuma sem grupo).
+  Fluxo (entra no Resumo Diario) ....... 2.068.744,60
+    Mercadorias P/Revenda ............... 1.324.761,80
+  Excluido do fluxo (lista AE) ......... 0,00
+  TOTAL GERAL COMPLETO ................. 2.068.744,60
+RECONCILIACAO mes a mes: OK em todos os meses. n/d / a revisar: 0,00.
+Item recebido (Nota Fiscal): 1.401 com NF identificada; 169 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 70%):
+  Comprado a Mais/a Menos TOTAL . -66.884,48 (Out ainda parcial)
+  Set/2026: compra real 299.933,52 x sugerida 276.163,83 = +23.769,69
+  Venda Anual: Out/2026 105.444,05 -> 117.193,03 (parcial); corte 09/10/2026 07:57:21.
+  Expectativa de Venda Out/2026: 403.664,88.
+
+------------------------------------------------------------------------------
+LOJA MO4
+------------------------------------------------------------------------------
+Base (Report): 4.475 titulos (era 4.436). 60 classificacoes (nenhuma sem grupo).
+  Fluxo (entra no Resumo Diario) ....... 2.657.111,64
+    Mercadorias P/Revenda ............... 1.852.284,00
+  Excluido do fluxo (lista AE) ......... 725.000,00
+  TOTAL GERAL COMPLETO ................. 3.382.111,64
+RECONCILIACAO mes a mes: OK em todos os meses. n/d / a revisar: 0,00.
+Item recebido (Nota Fiscal): 1.742 com NF identificada; 297 "nao encontrado".
+VENDA x COMPRA (Resultado, E3 = 70%):
+  Comprado a Mais/a Menos TOTAL . -91.492,82 (Out ainda parcial)
+  Set/2026: compra real 364.096,26 x sugerida 352.083,82 = +12.012,44
+  Venda Anual: Out/2026 117.063,10 -> 131.451,94 (parcial); corte 09/10/2026 07:57:48.
+  Expectativa de Venda Out/2026: 452.778,90.
+
+##############################################################################
+HISTORICO - RODADAS ANTERIORES
+
+ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
 Lojas 01, 02 e 04 - atualizado em 08/10/2026 (rodada automatica das 9h)
 
 O QUE MUDOU NESTA RODADA: os 12 brutos de RELATORIOS CISS chegaram com data
@@ -59,9 +125,6 @@ VENDA x COMPRA (Resultado, E3 = 70%):
   Set/2026: compra real 364.096,26 x sugerida 352.083,82 = +12.012,44
   Venda Anual: Out/2026 104.524,86 -> 117.063,10 (parcial); corte 08/10/2026 07:42:44.
   Expectativa de Venda Out/2026: 453.619,51.
-
-##############################################################################
-HISTORICO - RODADAS ANTERIORES
 
 ANALISE DE BOLETOS (CONTAS A PAGAR) - MERCADINHO OLIVEIRA
 Lojas 01, 02 e 04 - atualizado em 07/10/2026 (rodada automatica das 9h)
